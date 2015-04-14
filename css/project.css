@@ -1,0 +1,130 @@
+
+/* PROJECT DETAIL STYLES */
+
+.pr.page-close {
+	background: url(../images/close_icon_orange.png) 0 0 no-repeat scroll;
+	z-index: 2;
+}
+
+.project-wrapper {
+	position: relative;
+	min-height: 450px;
+	overflow: hidden;
+}
+
+.image-container {
+	background-size: cover;
+	background-position: center center;
+	height: 100%;
+}
+
+.project-intro {
+	position: absolute;
+	bottom: 40px;
+	left: 20px;
+	max-width: 460px;
+	font-family: "Roboto", sans-serif;
+	color: #F69670;
+	z-index: 2;
+	padding: 0 10px;
+}
+
+.project-intro h1 {
+	text-transform: uppercase;
+	font-size: 30px;	
+	margin: 0;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+.project-intro p {
+	font-size: 16px;
+	font-family: "Roboto Thin", sans-serif;
+	margin-top: 10px;
+}
+
+.pr.rslides,
+.pr.rslides li {
+	height: 100%;
+}
+
+#ca-1 {
+	background-image: url(../images/ca_logo_640x1100.png);
+}
+
+#ca-2 {
+	background-image: url(../images/ca_logo_2_640x1100.gif);
+}
+
+#ca-3 {
+	background-image: url(../images/ca_logo_3_640x1100.gif);
+}
+
+#ca-web-2 {
+	background-image: url(../images/ca_web_2_640x1100.gif);
+}
+#ca-web-3 {
+	background-image: url(../images/ca_web_3_640x1100.gif);
+}
+
+#ef-merch {
+	background-image: url(../images/ef_merch_640x1100.png);
+}
+
+#ef-merch-1 {
+	background-image: url(../images/ef_merch_1_640x1100.png);
+}
+
+#ef-merch-2 {
+	background-image: url(../images/ef_merch_2_640x1100.gif);
+}
+
+#ef-merch-3 {
+	background-image: url(../images/ef_merch_3_640x1100.png);
+}
+
+#ef-merch-4 {
+	background-image: url(../images/ef_merch_4_640x1100.png);
+}
+
+@media only screen and (min-device-width: 990px) {
+	#ca-1 {
+		background-image: url(../images/ca_logo_1200x800.png);
+	}
+
+	#ca-2 {
+		background-image: url(../images/ca_logo_2_1200x800.gif);
+	}
+
+	#ca-3 {
+		background-image: url(../images/ca_logo_3_1200x800.gif);
+	}
+	#ca-web-2 {
+		background-image: url(../images/ca_web_2_1200x800.gif);
+	}
+
+	#ca-web-3 {
+		background-image: url(../images/ca_web_3_1200x800.gif);
+	}
+
+	#ef-merch {
+		background-image: url(../images/ef_merch_1200x800.png);
+	}
+
+	#ef-merch-1 {
+		background-image: url(../images/ef_merch_1_1200x800.png);
+	}
+
+	#ef-merch-2 {
+		background-image: url(../images/ef_merch_2_1200x800.gif);
+	}
+
+	#ef-merch-3 {
+		background-image: url(../images/ef_merch_3_1200x800.png);
+	}
+
+	#ef-merch-4 {
+		background-image: url(../images/ef_merch_4_1200x800.png);
+	}
+
+}
