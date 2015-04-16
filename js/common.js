@@ -4,6 +4,7 @@ var coverVisible = false;
 // sets header height to match the viewport height
 function setHeaderHeight() {
 	var windowHeight = $(window).innerHeight();
+	windowHeight = parseInt(windowHeight) + 15 + "px";
 	$("header, .project-background, nav, .project-wrapper, .project-container").css("height", windowHeight);
 
 	// if cover is visible, adjust its height

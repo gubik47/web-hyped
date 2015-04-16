@@ -388,6 +388,10 @@ p.hash-tag {
     z-index: 3;
 }
 
+.qoute-container {
+	margin-top: -15px;
+}
+
 .qoute-border-container {
 	height: 15px;
 	width: 100%;
@@ -396,6 +400,13 @@ p.hash-tag {
 	position: relative;
 	z-index: 3;
 	margin-top: -1px;
+}
+
+.qoute-border-container.reverse {
+	background: url(../images/border-tile-green.png) 0 0 repeat-x scroll;
+	background-size: auto 15px;
+	transform: rotate(180deg);
+	top: 1px;
 }
 
 .qoute p {
@@ -430,6 +441,7 @@ textarea {
 	z-index: 2;
 	margin-top: -15px;
 	transition: all 0.3s ease 0s;
+
 }
 
 #contact-form-container h2 {
@@ -505,6 +517,28 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 /* FORM STYLES END */
 
+/* FOOTER LOGO STYLES START */
+
+#footer-logo-container {
+	background: #FFF url(../images/footer_logo_homepage.png) 0 0 no-repeat scroll;
+	height: 500px; 
+	display: block;
+	background-position: center center;
+	position: relative;
+	min-height: 765px;
+}
+
+#footer-logo-container p {
+	font-family: "Roboto Light", sans-serif;
+	font-size: 14px;
+	color: #f39773;
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+}
+
+/* FOOTER LOGO STYLES END */
+
 /* FOOTER INFO STYLES START */
 
 #footer-info-container {
@@ -516,11 +550,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 	transition: all 0.3s ease 0s;
 	min-height: 780px;
 	position: relative;
+	padding: 0;
 }
 
-#footer-info-container div {
+#footer-info-container div:first-child {
+	padding: 100px 40px 0 40px;
 	position: absolute;
-	top: 100px;
+	left: 0;
+	right: auto;
 }
 
 #footer-info-container h2 {
@@ -569,7 +606,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 #footer-info-container li.lnkdin a:hover,
 #footer-info-container li.lnkdin a:focus {
-	background: url(../images/sprites_icons.png) 0 -83px no-repeat scroll;
+	background: url(../images/sprites_icons.png) 0 -84px no-repeat scroll;
 }
 
 #footer-info-container li.twitt a {
@@ -582,7 +619,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 #footer-info-container li.twitt a:hover,
 #footer-info-container li.twitt a:focus {
-	background: url(../images/sprites_icons.png) -48px -83px no-repeat scroll;
+	background: url(../images/sprites_icons.png) -48px -82px no-repeat scroll;
 }
 
 #footer-info-container li.instgrm a {
@@ -595,7 +632,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 #footer-info-container li.instgrm a:hover,
 #footer-info-container li.instgrm a:focus {
-	background: url(../images/sprites_icons.png) -95px -83px no-repeat scroll;
+	background: url(../images/sprites_icons.png) -95px -84px no-repeat scroll;
 }
 
 #footer-info-container .press-kit-link:before {
@@ -607,10 +644,60 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     max-width: 90px;
 }
 
-#footer-info-container p {
-	margin-top: 130px;
+#footer-info-container {
+	font-family: "Roboto Thin", sans-serif;
+}
+
+#mini-contact-form-container p:nth-child(3) {
+	margin-top: 5px;
+}
+
+#mini-contact-form-container input {
+	height: 60px;
+	border: 1px solid #FFF;
+}
+
+#mini-contact-form-container input[type=text] {
+	background-color: #f39773;
+	padding: 10px 20px;
+	width: 250px;
+}
+
+#mini-contact-form-container input[type=submit] {
+	color: #f39773;
+	background-color: #FFF;
+	width: 130px;
+	text-transform: uppercase;
+	margin-left: -5px;
+}
+
+#mini-contact-form-container input[type=submit]:hover {
+	color: #FFF;
+	background-color: #B0DED3;
+}
+
+#form-toggle-button {
+	background-color: #FFF;
+	height: 110px;
+	color: #f39773;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#form-toggle-button p {
+	line-height: 110px;
+	text-align: center;
+	margin: 0;
+	font-size: 26px;
 	font-family: "Roboto Light", sans-serif;
-	font-size: 14px;
+}
+
+#form-toggle-button p:hover {
+	background-color: #B0DED3;
+	color: #FFF;
+	cursor: pointer;
 }
 
 /* FOOTER INFO STYLES END */
@@ -634,6 +721,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 	#project-cepice {
 		background: url(../images/football_hat_collection_2014.jpg) center center no-repeat scroll;
+		background-size: cover;
+	}
+
+	#project-studentlabel {
+		background: url(../images/sl_1_1920x1080.png) center center no-repeat scroll;
 		background-size: cover;
 	}
 
@@ -688,7 +780,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 		height: 30px;
 	}
 
-	
 	#nav-container {
 		right: 30px;
 		top: 28px;
@@ -753,14 +844,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 		font-size: 40px;
 	}
 
-	#footer-info-container p {
-		margin-top: 200px;
-	}
-
-	#footer-info-container div {
-		right: 100px;
-	}
-
 	#contact-form-container {
 		padding-left: 10%;
 		padding-right: 10%;
@@ -773,10 +856,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 }
 
-@media only screen and (min-device-width: 1440px) {
+@media only screen and (min-device-width: 1160px) {
 
-	#footer-info-container {
-		padding-left: 15%;
+	#footer-info-container div:first-child {
+		right: 100px;
+		left: auto;
 	}
 }
 
