@@ -102,5 +102,9 @@ function toggleNav() {
 			loadingBar.start();
 		}
 	});
+
+	$("#form-toggle-button, .page-close.contact-form").click(function() {
+		$("#contact-form-container").fadeToggle("slow", "linear");
+	});
 })();
 

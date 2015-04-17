@@ -435,13 +435,18 @@ textarea {
 
 #contact-form-container {
 	background-color: #fff;
-	padding: 100px 6% 80px 6%;
-	color: #b0ded3;
+	padding: 200px 6% 80px 6%;
+	color: #f39773;
 	text-transform: uppercase;
-	z-index: 2;
+	z-index: 50;
 	margin-top: -15px;
 	transition: all 0.3s ease 0s;
-
+	position: fixed;
+	width: 100%;
+	height: 110vh;
+	left: 0;
+	top: 0;
+	display: none;
 }
 
 #contact-form-container h2 {
@@ -525,7 +530,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 	display: block;
 	background-position: center center;
 	position: relative;
-	min-height: 765px;
+	min-height: 805px;
 }
 
 #footer-logo-container p {
@@ -535,6 +540,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 	position: absolute;
 	bottom: 40px;
 	right: 40px;
+	display: none;
 }
 
 /* FOOTER LOGO STYLES END */
@@ -548,9 +554,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 	z-index: 1;
 	margin-top: -15px;
 	transition: all 0.3s ease 0s;
-	min-height: 780px;
+	min-height: 820px;
 	position: relative;
 	padding: 0;
+	font-family: "Roboto Thin", sans-serif;
 }
 
 #footer-info-container div:first-child {
@@ -568,6 +575,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 #footer-info-container .contact-email {
+	position: relative;
+	top: 15px;
 	font-size: 30px;
 }
 
@@ -644,8 +653,13 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     max-width: 90px;
 }
 
-#footer-info-container {
-	font-family: "Roboto Thin", sans-serif;
+#footer-info-container .crafted-by-us.mobile {
+	margin-top: 50px;
+	font-family: "Roboto Light", sans-serif;
+}
+
+#mini-contact-form-container {
+	margin-top: 25px;
 }
 
 #mini-contact-form-container p:nth-child(3) {
@@ -821,7 +835,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 	}
 
 	#contact-form-container {
-		padding: 100px 20% 80px 20%;
+		padding: 200px 25% 80px;
 	}
 }
 
@@ -844,14 +858,16 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 		font-size: 40px;
 	}
 
-	#contact-form-container {
-		padding-left: 10%;
-		padding-right: 10%;
-		padding-bottom: 30px;
-	}
-
 	.contact-form-border-container {
 	    display: none;
+	}
+
+	#footer-logo-container p {
+		display: block;
+	}
+
+	.crafted-by-us.mobile {
+		display: none;
 	}
 
 }
@@ -997,6 +1013,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 	width: 36px;
 	height: 35px;
 	background: url(../images/close_icon_white.png) 0 0 no-repeat scroll;
+}
+
+.page-close.contact-form {
+	background: url(../images/close_icon_green.png) 0 0 no-repeat scroll;
 }
 
 @media only screen and (min-device-width: 530px) {
