@@ -103,8 +103,13 @@ function toggleNav() {
 		}
 	});
 
-	$("#form-toggle-button, .page-close.contact-form").click(function() {
-		$("#contact-form-container").fadeToggle("slow", "linear");
+	$("#form-toggle-button").click(function() {
+		$("#contact-form-container").fadeToggle();
+	});
+
+	$(".page-close.contact-form").click(function(e) {
+		e.preventDefault();
+		$("#contact-form-container").fadeToggle();
 	});
 })();
 
