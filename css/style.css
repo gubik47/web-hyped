@@ -429,21 +429,25 @@ p.hash-tag {
 
 /* FORM STYLES START */
 
+#form-popup-wrapper {
+	position: relative;
+}
+
 textarea {
 	resize: vertical;
 }
 
 #contact-form-container {
 	background-color: #fff;
-	padding: 200px 6% 80px 6%;
+	padding: 100px 6% 80px 6%;
 	color: #f39773;
 	text-transform: uppercase;
-	z-index: 50;
+	z-index: 2;
 	margin-top: -15px;
 	transition: all 0.3s ease 0s;
-	position: fixed;
+	position: absolute;
 	width: 100%;
-	height: 110vh;
+	height: 860px;
 	left: 0;
 	top: 0;
 	display: none;
@@ -497,16 +501,20 @@ textarea {
 	background-color: #F39773;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+input::-webkit-input-placeholder, 
+textarea::-webkit-input-placeholder { 
     color: #fff !important;
 }
-input:-moz-placeholder, textarea:-moz-placeholder { 
+input:-moz-placeholder, 
+textarea:-moz-placeholder { 
     color: #fff !important;
 }
-input::-moz-placeholder, textarea::-moz-placeholder { 
+input::-moz-placeholder, 
+textarea::-moz-placeholder { 
     color: #fff !important;
 }
-input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+input:-ms-input-placeholder, 
+textarea:-ms-input-placeholder { 
     color: #fff !important;
 }
 
@@ -530,7 +538,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 	display: block;
 	background-position: center center;
 	position: relative;
-	min-height: 805px;
+	min-height: 845px;
 }
 
 #footer-logo-container p {
@@ -554,14 +562,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 	z-index: 1;
 	margin-top: -15px;
 	transition: all 0.3s ease 0s;
-	min-height: 820px;
+	min-height: 860px;
 	position: relative;
 	padding: 0;
 	font-family: "Roboto Thin", sans-serif;
 }
 
 #footer-info-container div:first-child {
-	padding: 100px 40px 0 40px;
+	padding: 100px 10px 0 30px;
 	position: absolute;
 	left: 0;
 	right: auto;
@@ -667,20 +675,20 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 #mini-contact-form-container input {
-	height: 60px;
+	height: 50px;
 	border: 1px solid #FFF;
 }
 
 #mini-contact-form-container input[type=text] {
 	background-color: #f39773;
 	padding: 10px 20px;
-	width: 250px;
+	width: 200px;
 }
 
 #mini-contact-form-container input[type=submit] {
 	color: #f39773;
 	background-color: #FFF;
-	width: 130px;
+	width: 80px;
 	text-transform: uppercase;
 	margin-left: -5px;
 }
@@ -690,10 +698,15 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 	background-color: #B0DED3;
 }
 
+#mini-contact-form-container input:focus {
+	box-shadow: none;
+	outline: none;
+}
+
 #form-toggle-button {
-	background-color: #FFF;
+	background-color: #B0DED3;
 	height: 110px;
-	color: #f39773;
+	color: #FFF;
 	width: 100%;
 	position: absolute;
 	bottom: 0;
@@ -709,8 +722,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 #form-toggle-button p:hover {
-	background-color: #B0DED3;
-	color: #FFF;
+	background-color: #FFF;
+	color: #f39773;
 	cursor: pointer;
 }
 
@@ -834,8 +847,16 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 		margin-left: 60px;
 	}
 
-	#contact-form-container {
-		padding: 200px 25% 80px;
+	#mini-contact-form-container input {
+		height: 60px;
+	}
+
+	#mini-contact-form-container input[type=text] {
+		width: 250px;
+	}
+
+	#mini-contact-form-container input[type=submit] {
+		width: 130px;
 	}
 }
 
@@ -868,6 +889,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 	.crafted-by-us.mobile {
 		display: none;
+	}
+
+	#contact-form-container {
+		padding: 10vh 25% 80px;
 	}
 
 }
