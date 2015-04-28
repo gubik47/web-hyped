@@ -141,18 +141,18 @@ header.in #main-logo-container {
 	min-height: 450px;
 }
 
-#project-ca-logo {
-	background: url(../images/ca_logo_640x1100.png) center center no-repeat scroll;
+#project-ca-web {
+	background: url(../images/projects/ca/ca_3_640x1100.jpg) center center no-repeat scroll;
 	background-size: cover;
 }
 
 #project-ef-merch {
-	background: url(../images/ef_merch_640x1100.png) center center no-repeat scroll;
+	background: url(../images/projects/ef/ef_merch_1_640x1100.jpg) center center no-repeat scroll;
 	background-size: cover;
 }
 
-#project-ca-web {
-	background: url(../images/ca_web_640x1100.png) center center no-repeat scroll;
+#project-student-label {
+	background: url(../images/projects/sl/sl_1_640x1100.jpg) center center no-repeat scroll;
 	background-size: cover;
 }
 
@@ -730,29 +730,19 @@ textarea:-ms-input-placeholder {
 /* FOOTER INFO STYLES END */
 
 @media only screen and (min-width: 736px) {
-  
-  	#project-ca-logo {
-		background: url(../images/ca_logo_1200x800.png) center center no-repeat scroll;
+ 
+ 	#project-ca-web {
+		background: url(../images/projects/ca/ca_3_1920x1080.jpg) center center no-repeat scroll;
 		background-size: cover;
-	}
+	} 
 
 	#project-ef-merch {
-		background: url(../images/ef_merch_1200x800.png) center center no-repeat scroll;
+		background: url(../images/projects/ef/ef_merch_1_1920x1080.jpg) center center no-repeat scroll;
 		background-size: cover;
 	}
 
-	#project-ca-web {
-		background: url(../images/ca_web_1200x800.png) center center no-repeat scroll;
-		background-size: cover;
-	}
-
-	#project-cepice {
-		background: url(../images/football_hat_collection_2014.jpg) center center no-repeat scroll;
-		background-size: cover;
-	}
-
-	#project-studentlabel {
-		background: url(../images/sl_1_1920x1080.png) center center no-repeat scroll;
+	#project-student-label {
+		background: url(../images/projects/sl/sl_1_1920x1080.jpg) center center no-repeat scroll;
 		background-size: cover;
 	}
 
