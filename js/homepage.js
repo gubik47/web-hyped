@@ -104,12 +104,12 @@ function toggleNav() {
 	});
 
 	$("#form-toggle-button").click(function() {
-		$("#contact-form-container").fadeToggle();
+		$("#contact-form-container").toggle();
 	});
 
 	$(".page-close.contact-form").click(function(e) {
 		e.preventDefault();
-		$("#contact-form-container").fadeToggle();
+		$("#contact-form-container").toggle();
 	});
 })();
 
