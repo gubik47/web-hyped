@@ -26,7 +26,7 @@
 	font-family: "Roboto", sans-serif;
 	color: #F69670;
 	z-index: 2;
-	padding: 0 10px;
+	padding: 0 20px 0 0;
 }
 
 .project-intro h1 {
@@ -37,14 +37,11 @@
 	font-weight: 700;
 }
 
-.project-intro p:first-of-type {
-	margin-top: 15px;
-}
-
 .project-intro p {
-	font-size: 16px;
+	margin-top: 10px;
+	font-size: 12px;
 	font-family: "Roboto Thin", sans-serif;
-	margin-bottom: 3px;
+	padding-left: 2px;
 }
 
 .project-intro a {
@@ -62,13 +59,16 @@
 
 /* CENY ANDEL GALLERY */
 #ca-web-1 {
-	background-image: url(../images/projects/ca/ca_1_640x1100.gif);
+	background-image: url(../images/projects/ca/ca_1_640x1100.jpg);
 }
 #ca-web-2 {
-	background-image: url(../images/projects/ca/ca_2_640x1100.jpg);
+	background-image: url(../images/projects/ca/ca_2_640x1100.gif);
 }
 #ca-web-3 {
-	background-image: url(../images/projects/ca/ca_3_640x1100.gif);
+	background-image: url(../images/projects/ca/ca_3_640x1100.jpg);
+}
+#ca-web-4 {
+	background-image: url(../images/projects/ca/ca_4_640x1100.gif);
 }
 
 
@@ -101,6 +101,10 @@
 }
 
 @media only screen and (min-device-width: 990px) {
+	.project-intro p {
+		font-size: 14px;
+	}
+
 	/* CENY ANDEL GALLERY */
 	#ca-web-1 {
 		background-image: url(../images/projects/ca/ca_1_1920x1080.gif);
@@ -109,7 +113,10 @@
 		background-image: url(../images/projects/ca/ca_2_1920x1080.jpg);
 	}
 	#ca-web-3 {
-		background-image: url(../images/projects/ca/ca_3_1920x1080.gif);
+		background-image: url(../images/projects/ca/ca_3_1920x1080.jpg);
+	}  
+	#ca-web-4 {
+		background-image: url(../images/projects/ca/ca_4_1920x1080.gif);
 	}  
 
 	/* EWA FARNA MERCH GALLERY */

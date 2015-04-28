@@ -142,7 +142,7 @@ header.in #main-logo-container {
 }
 
 #project-ca-web {
-	background: url(../images/projects/ca/ca_3_640x1100.jpg) center center no-repeat scroll;
+	background: url(../images/projects/ca/ca_1_640x1100.jpg) center center no-repeat scroll;
 	background-size: cover;
 }
 
@@ -732,7 +732,7 @@ textarea:-ms-input-placeholder {
 @media only screen and (min-width: 736px) {
  
  	#project-ca-web {
-		background: url(../images/projects/ca/ca_3_1920x1080.jpg) center center no-repeat scroll;
+		background: url(../images/projects/ca/ca_1_1920x1080.gif) center center no-repeat scroll;
 		background-size: cover;
 	} 
 
