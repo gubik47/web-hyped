@@ -118,7 +118,7 @@ header.in #main-logo-container {
 	top: 41px;
 	right: 40px;
 	transition: all 0.5s ease 0s;
-	background: url(../images/nav_button_orange.png) 0 0 no-repeat scroll;
+	background: url(../images/icons/icon_nav_orange.png) 0 0 no-repeat scroll;
 	background-size: contain;
 	width: 34px;
 	height: 25px;
@@ -228,28 +228,22 @@ header.in #main-logo-container {
 
 .hp .rslides_nav.prev,
 .pr .rslides_nav.prev {
-	background: url(../images/sprites_icons.png) -80px 0 no-repeat scroll;
-}
-
-.hp .rslides_nav.prev:hover {
-	background: url(../images/sprites_icons.png) 0 0 no-repeat scroll;
+	background: url(../images/icons/icon_sprites.png) -80px 0 no-repeat scroll;
 }
 
 .hp .rslides_nav.next,
 .pr .rslides_nav.next {
-	background: url(../images/sprites_icons.png) -100px 0 no-repeat scroll;
+	background: url(../images/icons/icon_sprites.png) -100px 0 no-repeat scroll;
 }
 
-.hp .rslides_nav.next:hover {
-	background: url(../images/sprites_icons.png) -20px 0 no-repeat scroll;
-}
-
+.hp .rslides_nav.prev:hover,
 .pr .rslides_nav.prev:hover {
-	background: url(../images/sprites_icons.png) -40px 0 no-repeat scroll;
+	background: url(../images/icons/icon_sprites.png) -40px 0 no-repeat scroll;
 }
 
+.hp .rslides_nav.next:hover,
 .pr .rslides_nav.next:hover {
-	background: url(../images/sprites_icons.png) -60px 0 no-repeat scroll;
+	background: url(../images/icons/icon_sprites.png) -60px 0 no-repeat scroll;
 }
 
 .loading-bar {
@@ -350,7 +344,7 @@ p.hash-tag {
 }
 
 #social-nav .lnkdin a {
-	background: url(../images/linkedin_icon.png) 175px center no-repeat scroll;
+	background: url(../images/icons/icon_linkedin.png) 175px center no-repeat scroll;
 }
 
 #social-nav .lnkdin:hover,
@@ -359,7 +353,7 @@ p.hash-tag {
 }
 
 #social-nav .twitt a {
-	background: url(../images/twitter_icon.png) 175px center no-repeat scroll;
+	background: url(../images/icons/icon_twitter.png) 175px center no-repeat scroll;
 }
 
 #social-nav .twitt:hover,
@@ -368,7 +362,7 @@ p.hash-tag {
 } 
 
 #social-nav .instgrm a {
-	background: url(../images/instagram_icon.png) 175px center no-repeat scroll;
+	background: url(../images/icons/icon_instagram.png) 175px center no-repeat scroll;
 }
 
 #social-nav .instgrm:hover,
@@ -613,7 +607,7 @@ textarea:-ms-input-placeholder {
 }
 
 #footer-info-container li.lnkdin a {
-	background: url(../images/sprites_icons.png) 0 -36px no-repeat scroll;
+	background: url(../images/icons/icon_sprites.png) 0 -36px no-repeat scroll;
 	width: 47px;
 	height: 48px;
 
@@ -622,11 +616,11 @@ textarea:-ms-input-placeholder {
 
 #footer-info-container li.lnkdin a:hover,
 #footer-info-container li.lnkdin a:focus {
-	background: url(../images/sprites_icons.png) 0 -84px no-repeat scroll;
+	background: url(../images/icons/icon_sprites.png) 0 -84px no-repeat scroll;
 }
 
 #footer-info-container li.twitt a {
-	background: url(../images/sprites_icons.png) -48px -36px no-repeat scroll;
+	background: url(../images/icons/icon_sprites.png) -48px -36px no-repeat scroll;
 	width: 47px;
 	height: 48px;
 
@@ -635,11 +629,11 @@ textarea:-ms-input-placeholder {
 
 #footer-info-container li.twitt a:hover,
 #footer-info-container li.twitt a:focus {
-	background: url(../images/sprites_icons.png) -48px -82px no-repeat scroll;
+	background: url(../images/icons/icon_sprites.png) -48px -82px no-repeat scroll;
 }
 
 #footer-info-container li.instgrm a {
-	background: url(../images/sprites_icons.png) -95px -39px no-repeat scroll;
+	background: url(../images/icons/icon_sprites.png) -95px -39px no-repeat scroll;
 	width: 47px;
 	height: 45px;
 
@@ -648,7 +642,7 @@ textarea:-ms-input-placeholder {
 
 #footer-info-container li.instgrm a:hover,
 #footer-info-container li.instgrm a:focus {
-	background: url(../images/sprites_icons.png) -95px -84px no-repeat scroll;
+	background: url(../images/icons/icon_sprites.png) -95px -84px no-repeat scroll;
 }
 
 #footer-info-container .press-kit-link:before {
@@ -1031,11 +1025,11 @@ textarea:-ms-input-placeholder {
 	display: inline-block;
 	width: 36px;
 	height: 35px;
-	background: url(../images/close_icon_white.png) 0 0 no-repeat scroll;
+	background: url(../images/icons/icon_close_white.png) 0 0 no-repeat scroll;
 }
 
 .page-close.contact-form {
-	background: url(../images/close_icon_green.png) 0 0 no-repeat scroll;
+	background: url(../images/icons/icon_close_green.png) 0 0 no-repeat scroll;
 }
 
 @media only screen and (min-width: 530px) {

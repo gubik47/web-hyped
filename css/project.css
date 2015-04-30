@@ -2,7 +2,7 @@
 /* PROJECT DETAIL STYLES */
 
 .pr.page-close {
-	background: url(../images/close_icon_orange.png) 0 0 no-repeat scroll;
+	background: url(../images/icons/icon_close_orange.png) 0 0 no-repeat scroll;
 	z-index: 2;
 }
 
