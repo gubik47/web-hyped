@@ -527,7 +527,7 @@ textarea:-ms-input-placeholder {
 /* FOOTER LOGO STYLES START */
 
 #footer-logo-container {
-	background: #FFF url(../images/footer_logo_homepage.png) 0 0 no-repeat scroll;
+	background: #FFF url(../images/footer_homepage.gif) 0 0 no-repeat scroll;
 	display: block;
 	background-position: center center;
 	position: relative;
