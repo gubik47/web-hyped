@@ -105,6 +105,10 @@ function toggleNav() {
 
 	$("#form-toggle-button").click(function() {
 		$("#contact-form-container").toggle();
+
+		$("html, body").animate({
+			scrollTop: $("#contact-form-container").offset().top
+		}, 1000);
 	});
 
 	$(".page-close.contact-form").click(function(e) {
