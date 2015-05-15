@@ -500,7 +500,6 @@ textarea::-webkit-input-placeholder {
 }
 input:-moz-placeholder, 
 textarea:-moz-placeholder { 
-    color: #fff !important;
 }
 input::-moz-placeholder, 
 textarea::-moz-placeholder { 
@@ -675,7 +674,6 @@ textarea:-ms-input-placeholder {
 	vertical-align: middle;
 	white-space: normal;
 	background: none;
-	line-height: 1;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
