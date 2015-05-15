@@ -397,9 +397,8 @@ p.hash-tag {
 }
 
 .qoute-border-container.reverse {
-	background: url(../images/border-tile-green.png) 0 0 repeat-x scroll;
+	background: url(../images/border-tile-green-up.png) 0 0 repeat-x scroll;
 	background-size: auto 15px;
-	transform: rotate(180deg);
 	top: 1px;
 }
 
@@ -668,6 +667,19 @@ textarea:-ms-input-placeholder {
 }
 
 #mini-contact-form-container input {
+	/* reset */
+	margin: 0;
+	border: 0;
+	padding: 0;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: normal;
+	background: none;
+	line-height: 1;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+
 	height: 50px;
 	border: 1px solid #FFF;
 	border-radius: 0;
@@ -675,8 +687,8 @@ textarea:-ms-input-placeholder {
 
 #mini-contact-form-container input[type=text] {
 	background-color: #f39773;
-	padding: 10px 20px;
-	width: 200px;
+	padding: 0 20px;
+	width: 155px;
 }
 
 #mini-contact-form-container input[type=submit] {
@@ -836,7 +848,7 @@ textarea:-ms-input-placeholder {
 	}
 
 	#mini-contact-form-container input[type=text] {
-		width: 250px;
+		width: 210px;
 	}
 
 	#mini-contact-form-container input[type=submit] {
