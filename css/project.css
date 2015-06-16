@@ -3,13 +3,17 @@
 
 .pr.page-close {
 	background: url(../images/icons/icon_close_orange.png) 0 0 no-repeat scroll;
-	z-index: 2;
+	z-index: 3;
 }
 
 .project-wrapper {
 	position: relative;
 	min-height: 450px;
 	overflow: hidden;
+}
+
+.project-switch {
+	z-index: 3;
 }
 
 .image-container {
@@ -19,19 +23,16 @@
 }
 
 .project-intro {
-	position: absolute;
-	bottom: 40px;
-	left: 20px;
-	max-width: 460px;
 	font-family: "Roboto", sans-serif;
-	color: #F69670;
+	color: #444;
 	z-index: 2;
-	padding: 0 20px 0 0;
+	padding: 0 30px;
+	margin-top: 50px;
 }
 
 .project-intro h1 {
 	text-transform: uppercase;
-	font-size: 30px;	
+	font-size: 24px;	
 	margin: 0;
 	letter-spacing: 1px;
 	font-weight: 700;
@@ -40,7 +41,7 @@
 .project-intro p {
 	margin-top: 10px;
 	font-size: 12px;
-	font-family: "Roboto Thin", sans-serif;
+	font-family: "Roboto Light", sans-serif;
 	padding-left: 2px;
 }
 
@@ -100,10 +101,36 @@
 	background-image: url(../images/projects/sl/sl_4_640x1100.gif);
 }
 
-@media only screen and (min-device-width: 990px) {
-	.project-intro p {
-		font-size: 14px;
+@media only screen and (min-device-width: 736px) {
+	.project-intro {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 320px;
+		margin-top: 0;
+		height: 100%;
+		z-index: 2;
 	}
+
+	.project-intro .bg {
+		background-color: rgba(255,255,255,0.6);
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 100%;
+		filter: blur(5px);
+  		-webkit-filter: blur(5px);
+	}
+
+	.project-intro .content {
+		position: absolute;
+		top: 120px;
+		left: 0;
+		padding: 30px;
+	}
+}
+ 
+@media only screen and (min-device-width: 990px) {
 
 	/* CENY ANDEL GALLERY */
 	#ca-web-1 {
