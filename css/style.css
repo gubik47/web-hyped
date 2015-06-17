@@ -214,7 +214,6 @@ ul.project-focus li.true:before {
 	border: 1px solid #F69670;
 	letter-spacing: 5px;
 	margin-top: 20px;
-	transition: all 0.3s ease 0s;
 	font-family: "Roboto Light", sans-serif;
 }
 
@@ -436,8 +435,9 @@ p.hash-tag {
 	letter-spacing: 5px;
 }
 
-.qoute span {
+.qoute a {
 	color: #f69670;
+	outline: none;
 }
 
 /* QOUTE STYLES END */
@@ -685,7 +685,8 @@ footer {
 	text-transform: uppercase;
 	font-family: "Roboto Light", sans-serif;
 	letter-spacing: 1px;
-	padding: 30px 20px 0 20px;
+	padding: 45px 20px 0 20px;
+	margin-top: -15px;
 }
 
 footer ul {
@@ -859,7 +860,7 @@ footer a:visited {
 	}
 
 	footer {
-		padding: 40px 40px 0 40px;
+		padding: 50px 40px 0 40px;
 	}
 
 	footer ul {

@@ -39,9 +39,14 @@ function toggleNav() {
 	});
 
 	/* Sliding behaviour of We Are link */
-	$("#nav-link-about").click(function(e) {
+	$("#nav-link-about, #qoute-link-about").click(function(e) {
 		// prevent default anchor click behavior
 		e.preventDefault();
+
+		// scroll top
+		$("html, body").animate({
+			scrollTop: 0
+		}, 1000);
 
 		// if about-us section is empty, get the source by AJAX
 		if ($("#site-cover-container").is(":empty")){
