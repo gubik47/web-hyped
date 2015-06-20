@@ -917,6 +917,35 @@ footer a:visited {
 		font-size: 48px;
 	}
 
+	#footer-info-container h2 {
+		font-size: 24px;
+	}
+
+	#footer-info-container h2 span {
+		letter-spacing: 6px;
+	}
+
+	#footer-info-container div:first-child {
+		width: 280px;
+	}
+
+	#footer-info-container p {
+		height: 60px;
+		line-height: 60px;
+		font-size: 24px;
+		margin-top: 20px;
+	}
+
+	#footer-info-container p span {
+		letter-spacing: 30px;
+	}
+
+	#footer-info-container td {
+		width: 93.3px;
+		height: 93.3px;
+		border: 1px solid #FFF;
+	}
+
 	footer {
 		font-size: 12px;
 	}
