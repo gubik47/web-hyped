@@ -223,8 +223,8 @@ ul.project-focus li.true:before {
 
 .button-project-view:hover,
 .button-project-view:focus {
-	border: 1px solid #B0DED3;
-	color: #B0DED3;
+	color: #FFF;
+	background-color: #F69670;
 }
 
 .project-switch {
@@ -683,7 +683,7 @@ footer {
 	background-color: #444;
 	color: white;
 	text-transform: uppercase;
-	font-family: "Roboto Light", sans-serif;
+	font-family: "Roboto Thin", sans-serif;
 	letter-spacing: 1px;
 	padding: 45px 20px 0 20px;
 	margin-top: -15px;
