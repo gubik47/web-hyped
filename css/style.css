@@ -639,43 +639,62 @@ textarea:-ms-input-placeholder {
 	height: 50px;
 }
 
+#dummies {
+	display: none;
+}
+
+#dummies .lnkdin {
+	background: url(../images/icons/icon_linkedin_green.svg) 0 0 no-repeat scroll;
+	background-size: 48px 48px;
+}
+
+#dummies .twitt {
+	background: url(../images/icons/icon_twitter_green.svg) 0 0 no-repeat scroll;
+	background-size: 48px 48px;
+}
+
+#dummies .instgrm {
+	background: url(../images/icons/icon_instagram_green.svg) 0 0 no-repeat scroll;
+	background-size: 48px 48px;
+}
+
 #footer-info-container td.lnkdin a {
-	background: url(../images/icons/icon_sprites.png) 0 -36px no-repeat scroll;
-	width: 47px;
-	height: 48px;
+	background: url(../images/icons/icon_linkedin_white.svg) 0 0 no-repeat scroll;
+	background-size: 48px 48px;
 
 	transition: none;
 }
 
 #footer-info-container td.lnkdin a:hover,
 #footer-info-container td.lnkdin a:focus {
-	background: url(../images/icons/icon_sprites.png) 0 -83px no-repeat scroll;
+	background: url(../images/icons/icon_linkedin_green.svg) 0 0 no-repeat scroll;
+	background-size: 48px 48px;
 }
 
 #footer-info-container td.twitt a {
-	background: url(../images/icons/icon_sprites.png) -48px -36px no-repeat scroll;
-	width: 47px;
-	height: 48px;
+	background: url(../images/icons/icon_twitter_white.svg) 0 3px no-repeat scroll;
+	background-size: 48px 48px;
 
 	transition: none;
 }
 
 #footer-info-container td.twitt a:hover,
 #footer-info-container td.twitt a:focus {
-	background: url(../images/icons/icon_sprites.png) -48px -82px no-repeat scroll;
+	background: url(../images/icons/icon_twitter_green.svg) 0 3px no-repeat scroll;
+	background-size: 48px 48px;
 }
 
 #footer-info-container td.instgrm a {
-	background: url(../images/icons/icon_sprites.png) -95px -40px no-repeat scroll;
-	width: 47px;
-	height: 45px;
+	background: url(../images/icons/icon_instagram_white.svg) 0 2px no-repeat scroll;
+	background-size: 48px 48px;
 
 	transition: none;
 }
 
 #footer-info-container td.instgrm a:hover,
 #footer-info-container td.instgrm a:focus {
-	background: url(../images/icons/icon_sprites.png) -95px -84px no-repeat scroll;
+	background: url(../images/icons/icon_instagram_green.svg) 0 2px no-repeat scroll;
+	background-size: 48px 48px;
 }
 
 footer {
