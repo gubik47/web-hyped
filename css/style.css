@@ -275,7 +275,7 @@ ul.project-focus li.true:before {
 	height: 2px;
 	background-color: #F39773;
 	width: 0%;
-	z-index: 2;
+	z-index: 3;
 }
 
 /* HEADER STYLES END */

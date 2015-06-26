@@ -6,6 +6,13 @@ function setHeaderHeight() {
 	var windowHeight = $(window).innerHeight();
 	windowHeight = parseInt(windowHeight) + 15 + "px";
 	$("header, .project-background, nav, .project-wrapper, .project-container").css("height", windowHeight);
+	
+	// set height of aside in project detail on devices with viewport wider than 736px
+	if ($(window).width() > 737) {
+		$(".project-intro").css("height", windowHeight);
+	} else {
+		$(".project-intro").css("height", "auto");
+	}
 
 	// if cover is visible, adjust its height
 	if (coverVisible) {
@@ -63,7 +70,7 @@ var loadingBar = {
 	$(window).resize(setHeaderHeight);
 
 	// add slideshow swipe support for touch devices
-	$(".rslides").swipe({
+	$(".rslides, .project-intro").swipe({
 		swipeLeft: function() {
 			$(".rslides_nav.next").click();
 		},
