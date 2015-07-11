@@ -166,6 +166,7 @@ ul.project-focus {
 	font-size: 12px;
 	color: #999;
 	border-left: 1px solid #f69670;
+	display: none;
 }
 
 header .project-container ul.project-focus li {
@@ -199,9 +200,12 @@ ul.project-focus li.true:before {
 	font-family: "Roboto", sans-serif;
 	position: absolute;
 	bottom: 45px;
-	left: 30px;
+	left: 0;
+	right: 0;
 	transition: all 0.3s ease 0s;
 	width: 100%;
+	margin: 0 auto;
+	width: 200px;
 }
 
 .button-project-view {
@@ -824,18 +828,12 @@ footer a:visited {
 
 	ul.project-focus {
 		left: 40px;
+		display: block;
 	}
 
 	.project-title {
 		left: 40px;
-	}
-
-	.project-title h1 {
-		font-family: "Roboto Medium", sans-serif;
-	}
-
-	.project-title h2 {
-		letter-spacing: 8px;
+		margin: 0;
 	}
 
 	.qoute p {
@@ -937,7 +935,7 @@ footer a:visited {
 	}
 
 	#footer-info-container h2 {
-		font-size: 24px;
+		font-size: 34px;
 	}
 
 	#footer-info-container h2 span {
@@ -946,12 +944,14 @@ footer a:visited {
 
 	#footer-info-container div:first-child {
 		width: 280px;
+		padding-top: 75px;
+	}
+
+	#footer-info-container {
+		min-height: 425px;
 	}
 
 	#footer-info-container p {
-		height: 60px;
-		line-height: 60px;
-		font-size: 24px;
 		margin-top: 20px;
 	}
 
