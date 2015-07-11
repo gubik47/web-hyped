@@ -7,8 +7,9 @@ function setHeaderHeight() {
 	windowHeight = parseInt(windowHeight) + 15 + "px";
 	$("header, .project-background, nav, .project-wrapper, .project-container").css("height", windowHeight);
 	
+	//console.log($(window).width());
 	// set height of aside in project detail on devices with viewport wider than 736px
-	if ($(window).width() > 737) {
+	if ($(window).width() > 989) {
 		$(".project-intro").css("height", windowHeight);
 	} else {
 		$(".project-intro").css("height", "auto");
