@@ -5,11 +5,13 @@ var coverVisible = false;
 function setHeaderHeight() {
 	var windowHeight = $(window).innerHeight();
 	windowHeight = parseInt(windowHeight) + 15 + "px";
-	$("header, .project-background, nav, .project-wrapper, .project-container").css("height", windowHeight);
+	$("header, .project-background, nav, .project-container").css("height", windowHeight);
 	
 	//console.log($(window).width());
 	// set height of aside in project detail on devices with viewport wider than 736px
-	if ($(window).width() > 989) {
+	windowHeight = parseInt($(window).innerHeight()) + "px";
+	$(".project-wrapper").css("height", windowHeight);
+	if (parseInt($(window).width()) > 989) {
 		$(".project-intro").css("height", windowHeight);
 	} else {
 		$(".project-intro").css("height", "auto");
