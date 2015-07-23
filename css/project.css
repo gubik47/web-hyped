@@ -73,13 +73,13 @@
 
 /* CENY ANDEL GALLERY */
 #ca-web-1 {
-	background-image: url(../images/projects/ca/ca_1_640x1100.jpg);
+	background-image: url(../images/projects/ca/ca_1_640x1100.png);
 }
 #ca-web-2 {
 	background-image: url(../images/projects/ca/ca_2_640x1100.gif);
 }
 #ca-web-3 {
-	background-image: url(../images/projects/ca/ca_3_640x1100.jpg);
+	background-image: url(../images/projects/ca/ca_3_640x1100.png);
 }
 #ca-web-4 {
 	background-image: url(../images/projects/ca/ca_4_640x1100.gif);
@@ -88,30 +88,41 @@
 
 /* EWA FARNA MERCH GALLERY */
 #ef-1 {
-	background-image: url(../images/projects/ef/ef_merch_1_640x1100.jpg);
+	background-image: url(../images/projects/ef/ef_merch_1_640x1100.png);
 }
 #ef-2 {
-	background-image: url(../images/projects/ef/ef_merch_2_640x1100.jpg);
+	background-image: url(../images/projects/ef/ef_merch_2_640x1100.png);
 }
 #ef-3 {
 	background-image: url(../images/projects/ef/ef_merch_3_640x1100.gif);
 }
 #ef-4 {
-	background-image: url(../images/projects/ef/ef_merch_4_640x1100.jpg);
+	background-image: url(../images/projects/ef/ef_merch_4_640x1100.png);
 }
 
 /* STUDENT LABEL GALLERY */
 #sl-1 {
-	background-image: url(../images/projects/sl/sl_1_640x1100.jpg);
+	background-image: url(../images/projects/sl/sl_1_640x1100.png);
 }
 #sl-2 {
-	background-image: url(../images/projects/sl/sl_2_640x1100.jpg);
+	background-image: url(../images/projects/sl/sl_2_640x1100.png);
 }
 #sl-3 {
 	background-image: url(../images/projects/sl/sl_3_640x1100.gif);
 }
 #sl-4 {
 	background-image: url(../images/projects/sl/sl_4_640x1100.gif);
+}
+
+/* EZYWAY GALLERY */
+#ezy-1 {
+	background-image: url(../images/projects/ezy/ezy_1_640x1100.png);
+}
+#ezy-2 {
+	background-image: url(../images/projects/ezy/ezy_2_640x1100.png);
+}
+#ezy-3 {
+	background-image: url(../images/projects/ezy/ezy_3_640x1100.png);
 }
 
 @media only screen and (min-device-width: 736px) {
@@ -122,13 +133,13 @@
 
 	/* CENY ANDEL GALLERY */
 	#ca-web-1 {
-		background-image: url(../images/projects/ca/ca_1_1920x1080.gif);
+		background-image: url(../images/projects/ca/ca_1_1920x1080.png);
 	}
 	#ca-web-2 {
-		background-image: url(../images/projects/ca/ca_2_1920x1080.jpg);
+		background-image: url(../images/projects/ca/ca_2_1920x1080.gif);
 	}
 	#ca-web-3 {
-		background-image: url(../images/projects/ca/ca_3_1920x1080.jpg);
+		background-image: url(../images/projects/ca/ca_3_1920x1080.png);
 	}  
 	#ca-web-4 {
 		background-image: url(../images/projects/ca/ca_4_1920x1080.gif);
@@ -136,16 +147,16 @@
 
 	/* EWA FARNA MERCH GALLERY */
 	#ef-1 {
-		background-image: url(../images/projects/ef/ef_merch_1_1920x1080.jpg);
+		background-image: url(../images/projects/ef/ef_merch_1_1920x1080.png);
 	}
 	#ef-2 {
-		background-image: url(../images/projects/ef/ef_merch_2_1920x1080.jpg);
+		background-image: url(../images/projects/ef/ef_merch_2_1920x1080.png);
 	}
 	#ef-3 {
 		background-image: url(../images/projects/ef/ef_merch_3_1920x1080.gif);
 	}
 	#ef-4 {
-		background-image: url(../images/projects/ef/ef_merch_4_1920x1080.jpg);
+		background-image: url(../images/projects/ef/ef_merch_4_1920x1080.png);
 	}
   
 	/* STUDENT LABEL GALLERY */
@@ -162,6 +173,16 @@
 		background-image: url(../images/projects/sl/sl_4_1920x1080.gif);
 	}
 
+  /* EZYWAY GALLERY */
+#ezy-1 {
+	background-image: url(../images/projects/ezy/ezy_1_1920x1080.png);
+}
+#ezy-2 {
+	background-image: url(../images/projects/ezy/ezy_2_1920x1080.png);
+}
+#ezy-3 {
+	background-image: url(../images/projects/ezy/ezy_3_1920x1080.png);
+}
 	.project-wrapper h1 {
 		display: none;
 	}

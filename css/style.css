@@ -142,17 +142,21 @@ header.in #main-logo-container {
 }
 
 #project-ca-web {
-	background: url(../images/projects/ca/ca_1_640x1100.jpg) center center no-repeat scroll;
+	background: url(../images/projects/ca/ca_1_640x1100.png) center center no-repeat scroll;
 	background-size: cover;
 }
 
 #project-ef-merch {
-	background: url(../images/projects/ef/ef_merch_1_640x1100.jpg) center center no-repeat scroll;
+	background: url(../images/projects/ef/ef_merch_1_640x1100.png) center center no-repeat scroll;
 	background-size: cover;
 }
 
 #project-student-label {
-	background: url(../images/projects/sl/sl_1_640x1100.jpg) center center no-repeat scroll;
+	background: url(../images/projects/sl/sl_1_640x1100.png) center center no-repeat scroll;
+	background-size: cover;
+}
+#project-ezy {
+	background: url(../images/projects/ezy/ezy_1_640x1100.png) center center no-repeat scroll;
 	background-size: cover;
 }
 
@@ -745,17 +749,22 @@ footer a:visited {
 @media only screen and (min-width: 736px) {
  
  	#project-ca-web {
-		background: url(../images/projects/ca/ca_1_1920x1080.gif) center center no-repeat scroll;
+		background: url(../images/projects/ca/ca_1_1920x1080.png) center center no-repeat scroll;
 		background-size: cover;
 	} 
 
 	#project-ef-merch {
-		background: url(../images/projects/ef/ef_merch_1_1920x1080.jpg) center center no-repeat scroll;
+		background: url(../images/projects/ef/ef_merch_1_1920x1080.png) center center no-repeat scroll;
 		background-size: cover;
 	}
 
 	#project-student-label {
-		background: url(../images/projects/sl/sl_1_1920x1080.jpg) center center no-repeat scroll;
+		background: url(../images/projects/sl/sl_1_1920x1080.png) center center no-repeat scroll;
+		background-size: cover;
+	}
+  
+  #project-ezy {
+		background: url(../images/projects/ezy/ezy_1_1920x1080.png) center center no-repeat scroll;
 		background-size: cover;
 	}
 
