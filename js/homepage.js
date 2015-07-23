@@ -7,6 +7,10 @@ function toggleNav() {
 };
 
 (function() {
+
+	/* Hide dummies for image hover blink avoidance */
+	$("#dummies").hide();
+
 	/* Sliding behaviour of navigation */
 	$("#nav-container").click(function() {
 		toggleNav();

@@ -173,16 +173,17 @@
 		background-image: url(../images/projects/sl/sl_4_1920x1080.gif);
 	}
 
-  /* EZYWAY GALLERY */
-#ezy-1 {
-	background-image: url(../images/projects/ezy/ezy_1_1920x1080.png);
-}
-#ezy-2 {
-	background-image: url(../images/projects/ezy/ezy_2_1920x1080.png);
-}
-#ezy-3 {
-	background-image: url(../images/projects/ezy/ezy_3_1920x1080.png);
-}
+	  /* EZYWAY GALLERY */
+	#ezy-1 {
+		background-image: url(../images/projects/ezy/ezy_1_1920x1080.png);
+	}
+	#ezy-2 {
+		background-image: url(../images/projects/ezy/ezy_2_1920x1080.png);
+	}
+	#ezy-3 {
+		background-image: url(../images/projects/ezy/ezy_3_1920x1080.png);
+	}
+
 	.project-wrapper h1 {
 		display: none;
 	}
@@ -204,7 +205,7 @@
 	}
 
 	.project-intro .bg {
-		background-color: rgba(255,255,255,0.8);
+		background-color: rgba(255,255,255,0.6);
 		position: absolute;
 		left: 0;
 		right: 0;

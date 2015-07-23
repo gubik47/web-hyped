@@ -647,10 +647,6 @@ textarea:-ms-input-placeholder {
 	height: 50px;
 }
 
-#dummies {
-	display: none;
-}
-
 #dummies .lnkdin {
 	background: url(../images/icons/icon_linkedin_green.svg) 0 0 no-repeat scroll;
 	background-size: 48px 48px;
