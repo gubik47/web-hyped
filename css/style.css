@@ -890,8 +890,12 @@ footer a:visited {
 		float: left;
 	}
 
-	footer ul:first-child {
+	footer ul {
 		margin-right: 50px;
+	}
+
+	footer ul:last-child {
+		margin-right: 0;
 	}
 
 	footer #copyright {
