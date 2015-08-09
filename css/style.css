@@ -478,9 +478,13 @@ textarea {
 
 #contact-form-container h2 {
 	font-family: "Roboto Black", sans-serif;
-	font-size: 60px;
+	font-size: 40px;
 	margin: 0;
 	padding: 0;
+}
+
+#contact-form-container form {
+	margin-top: 30px;
 }
 
 #contact-form-container input,
@@ -548,6 +552,51 @@ textarea:-ms-input-placeholder {
 	position: relative;
 	z-index: 3;
 	margin-top: -1px;
+}
+
+#form-submit-success {
+	background-color: #fff;
+	padding: 100px 6% 80px 6%;
+	color: #f39773;
+	text-transform: uppercase;
+	z-index: 2;
+	margin-top: -15px;
+	transition: all 0.3s ease 0s;
+	position: absolute;
+	width: 100%;
+	height: 715px;
+	left: 0;
+	top: 0;
+	display: none;
+	opacity: 0.9;
+	text-align: center;
+}
+
+#form-submit-success div:first-child {
+	margin-top: 150px; 
+}
+
+#form-submit-success h2 {
+	font-family: "Roboto Black", sans-serif;
+	font-size: 26px;
+	margin: 0 auto;
+	padding: 0;	
+	text-align: center;
+}
+
+#form-submit-success a.return,
+#form-submit-success a.return:visited,
+#form-submit-success a.return:focus {
+	width: 150px;
+	margin: 55px auto 0;
+	color: #444;
+	display: inline-block;
+	font-family: "Roboto Light", sans-serif;
+	font-size: 18px;
+}
+
+#form-submit-success a.return:hover {
+	color: #B0DED3;
 }
 
 /* FORM STYLES END */
@@ -845,6 +894,10 @@ footer a:visited {
 		font-size: 22px;
 		letter-spacing: 5px;
 	}
+
+	#form-submit-success h2 {
+		font-size: 34px;
+	}
 }
 
 @media only screen and (min-width: 990px) {
@@ -880,6 +933,10 @@ footer a:visited {
 
 	#contact-form-container {
 		padding: 10vh 25% 80px;
+	}
+
+	#form-submit-success h2 {
+		font-size: 40px;
 	}
 
 	footer {
@@ -941,7 +998,7 @@ footer a:visited {
 	}
 
 	#contact-form-container h2 {
-		font-size: 48px;
+		font-size: 30px;
 	}
 
 	#footer-info-container h2 {
@@ -1065,7 +1122,7 @@ footer a:visited {
 
 .page-close {
 	position: absolute;
-	top: 37px;
+	top: 55px;
 	right: 30px;
 	display: inline-block;
 	width: 36px;

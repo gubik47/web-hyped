@@ -122,7 +122,29 @@ function toggleNav() {
 
 	$(".page-close.contact-form").click(function(e) {
 		e.preventDefault();
+		$(this).closest("section").toggle();
+	});
+
+	/* Odeslani formulare a zobrazeni podekovani */
+	$("#contact-form input[type='submit']").click(function(e) {
+		e.preventDefault();
+		/* TODO odeslani formulare
+		$.post("url", $(this).closest("form").serialize(), function(data) {
+			// Zobrazit podekovani
+		});
+		*/
 		$("#contact-form-container").toggle();
+		$("#form-submit-success").toggle();
+	});
+
+	/* Scroll na top pro talicitko u zobrazeni podekovani */
+	$("#form-submit-success a.return").click(function(e) {
+		e.preventDefault();
+		$("#form-submit-success").toggle();
+
+		$("html, body").animate({
+			scrollTop: $("header").offset().top
+		}, 1000);
 	});
 })();
 
