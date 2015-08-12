@@ -484,7 +484,7 @@ textarea {
 }
 
 #contact-form-container form {
-	margin-top: 30px;
+	margin-top: 20px;
 }
 
 #contact-form-container input,
@@ -1007,11 +1007,11 @@ footer a:visited {
 	}
 
 	#contact-form-container h2 {
-		font-size: 30px;
+		font-size: 28px;
 	}
 
 	#form-submit-success h2 {
-		font-size: 22px;
+		font-size: 18px;
 	}
 
 	#footer-info-container h2 {
