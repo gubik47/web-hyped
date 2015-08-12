@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/jquery.selectbox.css">
+	<!--<link rel="stylesheet" href="css/jquery.selectbox_new.css">-->
 	<link rel="stylesheet" href="css/responsiveslides.css">
 
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -164,20 +165,20 @@
 						<h2>Do not hesitate to</h2>
 						<h2>ask us&hellip;anything!</h2>
 						<form id="contact-form">
-							<select id="jquery-select" class="form-control" required>
-								<option id="option-placeholder" selected disabled>Choose a service</option>
-								<option>Design</option>
-								<option>Branding</option>
-								<option>Merchandising</option>
-								<option>Campaign</option>
-								<option>WEB / UI / UX</option>
-								<option>Case study</option>
-								<option>E-shop</option>
-                				<option>Anything</option>
+							<select name="service" id="jquery-select" class="form-control" required>
+								<option id="option-placeholder" disabled selected>Choose a service</option>
+								<option value="Design">Design</option>
+								<option value="Branding">Branding</option>
+								<option value="Merchandising">Merchandising</option>
+								<option value="Campaign">Campaign</option>
+								<option value="WEB / UI / UX">WEB / UI / UX</option>
+								<option value="Case study">Case study</option>
+								<option value="E-shop">E-shop</option>
+                				<option value="Anything">Anything</option>
 							</select>
-							<input class="form-control"type="text" placeholder="name" required>
-							<input class="form-control"type="text" placeholder="email" required>
-							<textarea  class="form-control"placeholder="Tell us a bit more about your project."></textarea>
+							<input name="full-name" class="form-control" type="text" placeholder="name" required>
+							<input name="email" class="form-control"type="text" placeholder="email" required>
+							<textarea name="info" class="form-control"placeholder="Tell us a bit more about your project."></textarea>
 							<input type="submit" value="send">
 						</form>
 						<a class="page-close contact-form" href=""></a>

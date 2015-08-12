@@ -95,6 +95,7 @@ function toggleNav() {
 		}
 	});
 
+
 	loadingBar.start();
 
 	$(".rslides").responsiveSlides({
@@ -141,11 +142,21 @@ function toggleNav() {
 
 	/* Odeslani formulare a zobrazeni podekovani */
 	$("#contact-form input[type='submit']").click(function(e) {
-		// odeslani formulare pres AJAX
-		$.post("./scripts/contact_form_submit.php", $(this).closest("form").serialize(), function(data) {
-			$("#contact-form-container").toggle();
-			$("#form-submit-success").toggle();
-		});
+		e.preventDefault();
+		var form = $(this).closest("form");
+
+		// validace pomoci HTML5
+		if (form[0].checkValidity()) {
+			// odeslani formulare pres AJAX
+			$.post("./scripts/contact_form_submit.php", form.serialize(), function(data) {
+				// zobrazeni popupu s podekovanim
+				$("#contact-form-container").toggle();
+				$("#form-submit-success").toggle();
+			});
+		} else {
+			// neni validni
+			// TODO: zobrazit nejakou indikaci
+		}
 	});
 
 	/* Scroll na top pro talicitko u zobrazeni podekovani */
