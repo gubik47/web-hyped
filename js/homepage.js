@@ -141,14 +141,11 @@ function toggleNav() {
 
 	/* Odeslani formulare a zobrazeni podekovani */
 	$("#contact-form input[type='submit']").click(function(e) {
-		e.preventDefault();
-		/* TODO odeslani formulare
-		$.post("url", $(this).closest("form").serialize(), function(data) {
-			// Zobrazit podekovani
+		// odeslani formulare pres AJAX
+		$.post("./scripts/contact_form_submit.php", $(this).closest("form").serialize(), function(data) {
+			$("#contact-form-container").toggle();
+			$("#form-submit-success").toggle();
 		});
-		*/
-		$("#contact-form-container").toggle();
-		$("#form-submit-success").toggle();
 	});
 
 	/* Scroll na top pro talicitko u zobrazeni podekovani */

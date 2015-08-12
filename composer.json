@@ -1,0 +1,13 @@
+{
+    "name": "hyped/web-hyped",
+    "description": "Hyped Prague portfolio",
+    "authors": [
+        {
+            "name": "Jakub Stefan",
+            "email": "gubaxxxl@gmail.com"
+        }
+    ],
+    "require": {
+    	"phpmailer/phpmailer": "~5.2"
+    }
+}
