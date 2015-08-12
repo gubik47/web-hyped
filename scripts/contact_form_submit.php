@@ -40,10 +40,10 @@ if (isset($_POST)) {
 	";
 
 	if (!$mail->send()) {
-		// success
-		echo json_encode(array("res" => "s"));
-	} else {
 		// failure
 		echo json_encode(array("res" => "f"));
+	} else {
+		// success
+		echo json_encode(array("res" => "s"));
 	}
 }
