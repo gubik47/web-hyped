@@ -113,6 +113,14 @@ function toggleNav() {
 	});
 
 	$("#form-toggle-button").click(function() {
+		/* 
+			Na malych displejich se musi prodlouzit hlavni cast stranky tak, 
+			aby formular neprekryval paticku.
+		*/
+		if (parseInt($(window).width()) <= 440) {
+			$("#footer-info-container").toggleClass("mobile-expand");
+		}
+
 		$("#contact-form-container").toggle();
 
 		$("html, body").animate({
@@ -122,6 +130,12 @@ function toggleNav() {
 
 	$(".page-close.contact-form").click(function(e) {
 		e.preventDefault();
+		/* 
+			Vraceni vysky hlavni casti stranky do puvodni hodnoty.
+		*/
+		if (parseInt($(window).width()) <= 440) {
+			$("#footer-info-container").toggleClass("mobile-expand");
+		}
 		$(this).closest("section").toggle();
 	});
 
@@ -141,7 +155,12 @@ function toggleNav() {
 	$("#form-submit-success a.return").click(function(e) {
 		e.preventDefault();
 		$("#form-submit-success").toggle();
-
+		/* 
+			Vraceni vysky hlavni casti stranky do puvodni hodnoty.
+		*/
+		if (parseInt($(window).width()) <= 440) {
+			$("#footer-info-container").toggleClass("mobile-expand");
+		}
 		$("html, body").animate({
 			scrollTop: $("header").offset().top
 		}, 1000);

@@ -933,6 +933,11 @@ footer a:visited {
 
 	#contact-form-container {
 		padding: 10vh 25% 80px;
+		margin-top: -30px;
+	}
+
+	#form-submit-success {
+		margin-top: -30px;
 	}
 
 	#form-submit-success h2 {
@@ -997,8 +1002,16 @@ footer a:visited {
 		right: 270px;
 	}
 
+	#contact-form-container {
+		margin-top: -30px;
+	}
+
 	#contact-form-container h2 {
 		font-size: 30px;
+	}
+
+	#form-submit-success h2 {
+		font-size: 22px;
 	}
 
 	#footer-info-container h2 {
@@ -1016,6 +1029,10 @@ footer a:visited {
 
 	#footer-info-container {
 		min-height: 425px;
+	}
+
+	#footer-info-container.mobile-expand {
+		min-height: 700px;
 	}
 
 	#footer-info-container p {
@@ -1122,7 +1139,7 @@ footer a:visited {
 
 .page-close {
 	position: absolute;
-	top: 55px;
+	top: 50px;
 	right: 30px;
 	display: inline-block;
 	width: 36px;
