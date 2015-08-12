@@ -1,10 +1,25 @@
 
-// toggle navigation movement and move/hide element that interfere with it
+/* toggle navigation movement and move/hide element that interfere with it */
 function toggleNav() {
 	$("header").toggleClass("in");
 	$("nav").toggleClass("offcanvas");
 	$(".loading-bar").toggle();
-};
+}
+
+/* Displays text popup after form submission */
+function displayMessage(type) {
+	$("#contact-form-container").toggle();
+	if (type == "s") {
+		$("#form-submit-success div h2:first-child").text("High five, you've made it.");
+		$("#form-submit-success div h2:last-child").text("First step towards success.");
+		$("#form-submit-success a.return").text("View portfolio");
+	} else {
+		$("#form-submit-success div h2:first-child").text("Ooop, an error has occurred.");
+		$("#form-submit-success div h2:last-child").text("Please try again later.");
+		$("#form-submit-success a.return").text("Go back");
+	}
+	$("#form-submit-success").toggle();
+}
 
 (function() {
 
@@ -91,7 +106,6 @@ function toggleNav() {
 				$(".sbDisabled").show();
 				next();
 			});
-
 		}
 	});
 
@@ -114,10 +128,7 @@ function toggleNav() {
 	});
 
 	$("#form-toggle-button").click(function() {
-		/* 
-			Na malych displejich se musi prodlouzit hlavni cast stranky tak, 
-			aby formular neprekryval paticku.
-		*/
+		// on smaller displays extend the main section of the page, so the footer is not cut off
 		if (parseInt($(window).width()) <= 440) {
 			$("#footer-info-container").toggleClass("mobile-expand");
 		}
@@ -131,27 +142,28 @@ function toggleNav() {
 
 	$(".page-close.contact-form").click(function(e) {
 		e.preventDefault();
-		/* 
-			Vraceni vysky hlavni casti stranky do puvodni hodnoty.
-		*/
+		// restore the main section of the page to normal height
 		if (parseInt($(window).width()) <= 440) {
 			$("#footer-info-container").toggleClass("mobile-expand");
 		}
 		$(this).closest("section").toggle();
 	});
 
-	/* Odeslani formulare a zobrazeni podekovani */
+	/* Form submission and popup display */
 	$("#contact-form input[type='submit']").click(function(e) {
 		e.preventDefault();
 		var form = $(this).closest("form");
 
-		// validace pomoci HTML5
 		if (form[0].checkValidity()) {
-			// odeslani formulare pres AJAX
+			// AJAX form submission
 			$.post("./scripts/contact_form_submit.php", form.serialize(), function(data) {
-				// zobrazeni popupu s podekovanim
-				$("#contact-form-container").toggle();
-				$("#form-submit-success").toggle();
+				if (data.res == "s") {
+					// success
+					displayMessage("s");
+				} else {
+					// failure
+					displayMessage("f");
+				}
 			});
 		} else {
 			// neni validni
@@ -159,13 +171,11 @@ function toggleNav() {
 		}
 	});
 
-	/* Scroll na top pro talicitko u zobrazeni podekovani */
+	/* Scroll to top on link click in text popup after form submission */
 	$("#form-submit-success a.return").click(function(e) {
 		e.preventDefault();
 		$("#form-submit-success").toggle();
-		/* 
-			Vraceni vysky hlavni casti stranky do puvodni hodnoty.
-		*/
+		// restore the main section of the page to normal height
 		if (parseInt($(window).width()) <= 440) {
 			$("#footer-info-container").toggleClass("mobile-expand");
 		}

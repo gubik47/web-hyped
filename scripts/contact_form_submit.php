@@ -3,14 +3,14 @@
 /* --------------------------------------------------------
 -- contact_form_submit.php
 
-- Zpracuje odeslany formular a odesla notifikaci na zvoleny mail v configu.
+- Processes submitted form and sends an notification email to specified e-mail address in config.php
 
 @author: Jakub Štefan
 ----------------------------------------------------------*/
 require_once "../config.php";
 require_once "../vendor/autoload.php";
 
-// Kontrola odeslani formulare
+// Form submission check
 if (isset($_POST)) {
 
 	$mail = new PHPMailer();
@@ -40,8 +40,10 @@ if (isset($_POST)) {
 	";
 
 	if (!$mail->send()) {
-		echo "Error!";
+		// success
+		echo json_encode(array("res" => "s"));
 	} else {
-		var_dump($_POST);
+		// failure
+		echo json_encode(array("res" => "f"));
 	}
 }
