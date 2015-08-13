@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/jquery.selectbox.css">
-	<!--<link rel="stylesheet" href="css/jquery.selectbox_new.css">-->
 	<link rel="stylesheet" href="css/responsiveslides.css">
 
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -165,7 +164,7 @@
 						<h2>Do not hesitate to</h2>
 						<h2>ask us&hellip;anything!</h2>
 						<form id="contact-form">
-							<select name="service" id="jquery-select" class="form-control" required>
+							<select name="service" id="jquery-select" class="form-control">
 								<option id="option-placeholder" disabled selected>Choose a service</option>
 								<option value="Design">Design</option>
 								<option value="Branding">Branding</option>
@@ -176,9 +175,17 @@
 								<option value="E-shop">E-shop</option>
                 				<option value="Anything">Anything</option>
 							</select>
-							<input name="full-name" class="form-control" type="text" placeholder="name" required>
-							<input name="email" class="form-control"type="text" placeholder="email" required>
-							<textarea name="info" class="form-control"placeholder="Tell us a bit more about your project."></textarea>
+							<div class="validation-wrapper">
+								<input name="full-name" class="form-control" type="text" placeholder="name">
+								<span class="name validation">please introduce yourself</span>
+								<span class="required">(required)</span>
+							</div>
+							<div class="validation-wrapper">
+								<input name="email" class="form-control"type="text" placeholder="email">
+								<span class="email validation">please tell us/correct your email</span>
+								<span class="required">(required)</span>
+							</div>
+							<textarea name="info" class="form-control" placeholder="Tell us a bit more about your project."></textarea>
 							<input type="submit" value="send">
 						</form>
 						<a class="page-close contact-form" href=""></a>

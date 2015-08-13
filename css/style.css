@@ -501,6 +501,31 @@ textarea {
 	font-size: 18px;
 }
 
+#contact-form-container .validation-wrapper {
+	position: relative;
+}
+
+#contact-form-container .required {
+	position: absolute;
+	font-size: 10px;
+	color: #999;
+	font-style: italic;
+	top: 35px;
+	right: 5px;
+	text-transform: none;
+}
+
+#contact-form-container .validation {
+    padding: 10px 0 0 10px;
+    text-align: left;
+    top: 12px;
+    width: 100%;
+    font-size: 14px;
+    display: none;
+    margin-bottom: -5px;
+}
+
+
 #contact-form-container input:focus,
 #contact-form-container select:focus,
 #contact-form-container textarea:focus {
@@ -1051,6 +1076,10 @@ footer a:visited {
 
 	#contact-form-container {
 		min-height: 730px;
+	}
+
+	#contact-form-container .validation {
+	    font-size: 12px;
 	}
 
 	footer {

@@ -4,7 +4,7 @@ function toggleNav() {
 	$("header").toggleClass("in");
 	$("nav").toggleClass("offcanvas");
 	$(".loading-bar").toggle();
-}
+} 
 
 /* Displays text popup after form submission */
 function displayMessage(type) {
@@ -13,12 +13,31 @@ function displayMessage(type) {
 		$("#form-submit-success div h2:first-child").text("High five, you've made it.");
 		$("#form-submit-success div h2:last-child").text("First step towards success.");
 		$("#form-submit-success a.return").text("View portfolio");
+		$("#form-submit-success a.return").addClass("success");
 	} else {
-		$("#form-submit-success div h2:first-child").text("Ooop, an error has occurred.");
-		$("#form-submit-success div h2:last-child").text("Please try again later.");
+		$("#form-submit-success div h2:first-child").text("Oops, something went wrong.");
+		$("#form-submit-success div h2:last-child").text("Please try again later...");
 		$("#form-submit-success a.return").text("Go back");
+		$("#form-submit-success a.return").removeClass("success");
 	}
 	$("#form-submit-success").toggle();
+}
+
+/* Displays validation warnings */
+function displayValidation(data) {
+	console.log(data);
+	if (data.error.email === true) {
+		$(".validation.email:hidden").css("display", "block");
+	}
+
+	if (data.error.name === true) {
+		$(".validation.name:hidden").css("display", "block");
+	}
+}
+
+/* Hides validation warnings */
+function hideValidation() {
+	$(".validation.name, .validation.email").css("display", "none");
 }
 
 (function() {
@@ -154,35 +173,43 @@ function displayMessage(type) {
 		e.preventDefault();
 		var form = $(this).closest("form");
 
-		if (form[0].checkValidity()) {
-			// AJAX form submission
-			$.post("./scripts/contact_form_submit.php", form.serialize(), function(data) {
-				var data = JSON.parse(data);
-				if (data.res == "s") {
-					// success
-					displayMessage("s");
-				} else {
-					// failure
-					displayMessage("f");
-				}
-			});
-		} else {
-			// neni validni
-			// TODO: zobrazit nejakou indikaci
-		}
+		hideValidation();
+		// AJAX form submission
+		$.post("./scripts/contact_form_submit.php", form.serialize(), function(data) {
+			var data = JSON.parse(data);
+			if (data.res == "s") {
+				// success
+				displayMessage("s");
+			} else if (data.res == "form_invalid") {
+				// invalid form
+				displayValidation(data);
+			} else {
+				// failure
+				displayMessage("f");
+			}
+		});
 	});
 
 	/* Scroll to top on link click in text popup after form submission */
 	$("#form-submit-success a.return").click(function(e) {
 		e.preventDefault();
 		$("#form-submit-success").toggle();
-		// restore the main section of the page to normal height
-		if (parseInt($(window).width()) <= 440) {
-			$("#footer-info-container").toggleClass("mobile-expand");
+		// scroll to top if form was successfully submitted
+		if ($(this).hasClass("success")) {
+			// restore the main section of the page to normal height
+			if (parseInt($(window).width()) <= 440) {
+				$("#footer-info-container").toggleClass("mobile-expand");
+			}
+			$("html, body").animate({
+				scrollTop: $("header").offset().top
+			}, 1000);
+		} else {
+			// go back to form if form was not successfully submitted
+			$("#contact-form-container").toggle();
+			$("html, body").animate({
+				scrollTop: $("#contact-form-container").offset().top
+			}, 1000);
 		}
-		$("html, body").animate({
-			scrollTop: $("header").offset().top
-		}, 1000);
 	});
 })();
 
