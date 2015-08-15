@@ -25,7 +25,7 @@ function displayMessage(type) {
 
 /* Displays validation warnings */
 function displayValidation(data) {
-	console.log(data);
+	//console.log(data);
 	if (data.error.email === true) {
 		$(".validation.email:hidden").css("display", "block");
 	}
