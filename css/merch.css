@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'proxima_novalight';
+    src: url('../fonts/proximanova-light-webfont.eot');
+    src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-light-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-light-webfont.woff') format('woff'),
+         url('../fonts/proximanova-light-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#page-container.merch {
+	font-family: "proxima_novalight", Helvetica, Arial, sans-serif;
+}
+
+header {
+	background: #b0ded3 url(../images/merch/hyped_merch_header.png) no-repeat scroll 0 0;
+	background-size: 260px auto;
+	background-position: center;
+}
+
+section {
+	padding: 20px;
+}
+
+section h2 {
+	font-size: 30px;
+}
+
+section p {
+	font-size: 18px;
+}
+
+.we-offer {
+	background-color: #eee;
+}
+
+.filter {
+	background-color: #b0ded3;
+	height: 80px;
+	font-size: 16px;
+	line-height: 40px;
+}
+
+.filter ul {
+	list-style: none;
+	text-align: justify;
+	margin: 0;
+	padding: 0;
+}
+
+.filter ul:after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+}
+
+.filter li {
+	display: inline-block;
+	line-height: 100%;
+}
+
+.contact-us {
+	background-color: #f69670;
+	font-size: 18px;
+}
+
+.products {
+	text-align: center;
+	padding: 0;
+}
+
+.products img {
+	object-fit: cover;
+	padding: 0;
+}
+
