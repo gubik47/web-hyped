@@ -1,3 +1,4 @@
 <?php
 
-define("EMAIL", "hello@hypedprg.com");
+define("EMAIL", "gubaxxxl@gmail.com");
+//define("EMAIL", "hello@hypedprg.com");

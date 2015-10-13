@@ -1,24 +1,68 @@
 @font-face {
     font-family: 'proxima_novalight';
-    src: url('../fonts/proximanova-light-webfont.eot');
-    src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/proximanova-light-webfont.woff2') format('woff2'),
-         url('../fonts/proximanova-light-webfont.woff') format('woff'),
-         url('../fonts/proximanova-light-webfont.ttf') format('truetype'),
-         url('../fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    src: url('../fonts/proxima_nova_light-webfont.eot');
+    src: url('../fonts/proxima_nova_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima_nova_light-webfont.woff2') format('woff2'),
+         url('../fonts/proxima_nova_light-webfont.woff') format('woff'),
+         url('../fonts/proxima_nova_light-webfont.ttf') format('truetype'),
+         url('../fonts/proxima_nova_light-webfont.svg#proxima_nova_ltlight') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+html {
+	min-height: 100%;
+}
+
+body {
+	height: 100%;
 }
 
 #page-container.merch {
 	font-family: "proxima_novalight", Helvetica, Arial, sans-serif;
+	position: relative;
+	z-index: 1;
+}
+
+#page-cover {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.7);
+	z-index: 2;
+	display: none;
+}
+
+#popup-container {
+	position: absolute;
+	z-index: 3;
+	top: 500px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 }
 
 header {
 	background: #b0ded3 url(../images/merch/hyped_merch_header.png) no-repeat scroll 0 0;
 	background-size: 260px auto;
 	background-position: center;
+	height: 400px;
+	position: relative;
+}
+
+header .scroll-arrow {
+	display: none;
+}
+
+header .hyped-logo {
+	background: url(../images/merch/hyped_logo_80x80.png) no-repeat scroll 0 0;
+	background-size: contain;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	left: 20px;
 }
 
 section {
@@ -27,6 +71,7 @@ section {
 
 section h2 {
 	font-size: 30px;
+	margin-top: 0;
 }
 
 section p {
@@ -34,7 +79,12 @@ section p {
 }
 
 .we-offer {
-	background-color: #eee;
+	background-color: #FFF;
+	position: relative;
+}
+
+.we-offer a {
+	display: none;
 }
 
 .filter {
@@ -42,13 +92,14 @@ section p {
 	height: 80px;
 	font-size: 16px;
 	line-height: 40px;
+	position: relative;
 }
 
 .filter ul {
 	list-style: none;
-	text-align: justify;
 	margin: 0;
 	padding: 0;
+	max-width: 325px;
 }
 
 .filter ul:after {
@@ -60,6 +111,24 @@ section p {
 .filter li {
 	display: inline-block;
 	line-height: 100%;
+	padding: 0 3px;
+}
+
+.filter li:first-child {
+	padding-left: 0;
+}
+
+.filter li.active {
+	color: #FFF;
+}
+
+.filter li.cat:hover {
+	color: #FFF;
+	cursor: pointer;
+}
+
+.filter a.contact-us {
+	display: none;
 }
 
 .contact-us {
@@ -67,13 +136,274 @@ section p {
 	font-size: 18px;
 }
 
+.contact-us a:hover,
+.contact-us a:focus {
+	color: #b0ded3;
+}
+
+.page-close.product-popup {
+	top: 15px;
+	right: 15px;
+	width: 25px;
+	height: 24px;
+	background: url(../images/icons/icon_close_grey.png) 0 0 no-repeat scroll;
+	background-size: contain;
+	z-index: 4;
+}
+
 .products {
 	text-align: center;
 	padding: 0;
 }
 
-.products img {
-	object-fit: cover;
+.products .row {
+	margin: 0;
+}
+
+.products img:hover {
+	cursor: pointer;
+}
+
+.products img,
+.product img {
+	max-width: 100%;
 	padding: 0;
 }
 
+.product {
+	max-width: 490px;
+	margin: 0 auto;
+	font-size: 14px;
+	display: none;
+	position: relative;
+}
+
+.product .image {
+	position: relative;
+	padding: 0;
+}
+
+.product-description {
+	padding-bottom: 0;
+	background-color: #FFF;
+}
+
+.product h3 {
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+.product p {
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.product .sizes {
+	margin-top: 20px;
+}
+
+.product ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	max-width: 120px;
+}
+
+.product ul:after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+}
+
+.product li {
+	display: inline-block;
+	line-height: 100%;
+}
+
+.product-colours {
+	padding: 0;
+}
+
+.product .colour {
+	width: 25%;
+	height: 40px;
+	float: left;
+}
+
+.product-contact {
+	background-color: #EEE;
+	height: 110px;
+	padding: 0;
+}
+
+.product-contact p {
+	line-height: 110px;
+	text-align: center;
+	margin: 0;
+	font-size: 22px;
+}
+
+.product-contact a {
+	color: #f69670;
+}
+
+.product-contact a:hover {
+	color: #b0ded3;
+	cursor: pointer;
+}
+
+#contact-form-container {
+	height: auto;
+	min-height: 0;
+	padding: 50px 15px;
+	max-width: 490px;
+	position: relative;
+	margin: 0 auto;
+}
+
+#contact-form-container .page-close {
+	width: 25px;
+	height: 24px;
+	top: 15px;
+	right: 15px;
+	background-size: contain;
+}
+
+@media only screen and (min-width: 380px) {
+	.filter {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 580px) {
+	header {
+		background-size: 460px auto;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	header .scroll-arrow {
+		display: block;
+		margin: 0 auto;
+		width: 47px;
+		height: 39px;
+		background: url(../images/icons/arrow_down_white.png) no-repeat scroll 0 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 40px;
+	}
+
+	header .scroll-arrow:hover {
+		cursor: pointer; 
+	}
+
+	header .hyped-logo {
+		width: 80px;
+		height: 80px;
+		top: 30px;
+		left: 30px;
+	}
+
+	section h2 {
+		font-size: 32px;
+	}
+
+	.we-offer,
+	.we-are {
+		padding: 40px;
+	}
+
+	.we-offer .wrapper {
+		width: 510px;
+		margin: 0 auto;
+		background: url(../images/merch/shirt-icon_130x124.png) no-repeat scroll 0 40px;
+		padding-left: 180px;
+	}
+
+	.we-offer a {
+		display: inline-block;
+		position: absolute;
+		width: 25px;
+		height: 67px;
+		background: url(../images/icons/arrow_left_grey.png) no-repeat scroll 0 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+
+	.we-offer a.arrow-right {
+		transform: rotate(180deg);
+		right: 80px;
+	}
+
+	.filter {
+		font-size: 24px;
+	}
+
+	.filter ul {
+		position: absolute;
+		left: 80px;
+		max-width: 100%;
+	}
+
+	.filter a.contact-us {
+		position: absolute;
+		right: 80px;
+		font-size: 24px;
+		background-color: transparent;
+		color: #f69670;
+		display: block;
+	}
+
+	.filter a.contact-us:hover {
+		color: #FFF;
+	}
+
+	section.contact-us {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	header {
+		background-size: 660px auto;
+	}
+
+	section h2 {
+		font-size: 40px;
+	}
+
+	section p {
+		font-size: 24px;
+	}
+
+	.we-offer,
+	.we-are {
+		padding: 80px;
+	}
+
+	.we-offer .wrapper {
+		width: 810px;
+		padding-left: 210px;
+	}
+
+	.product {
+		max-width: 920px;
+	}
+
+	.product .product-description {
+		padding: 30px 30px 70px;
+	}
+
+	.product .image {
+		float: left;
+		max-width: 460px;
+	}
+
+	.product .product-info {
+		display: inline-block;
+		max-width: 460px;
+	}
+}

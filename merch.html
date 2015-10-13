@@ -14,45 +14,127 @@
 	<link rel="stylesheet" href="css/jquery.selectbox.css">
 
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery.actual.min.js"></script>
 </head>
 <body>
 	<div id="page-container" class="merch">
+		<div id="page-cover"></div>
 		<header>
-			
+			<a class="hyped-logo" href="index.html"></a>
+			<div class="scroll-arrow"></div>
 		</header>
+		<div id="popup-container">
+			<div class="product">
+				<a class="page-close product-popup" href=""></a>
+				<section class="image">
+					<img width="100%" src="./images/merch/product-1-large.jpg">
+				</section>
+				<div class="product-info">
+					<section class="product-description">
+						<h3>Stanley Adores</h3>
+						<div class="desc">
+							<p>STTM526</p>
+							<p>Thin collar in selffabric binding with necktape Bottom and sleeve hem with blind stitch. Single Jersey 100% Organic ring-spun Combed Cotton 120 GSM</p>
+						</div>
+						<div class="sizes">
+							<p>Size chart</p>
+							<ul>
+								<li>S</li>
+								<li>/</li>
+								<li>M</li>							
+								<li>/</li>
+								<li>L</li>
+								<li>/</li>
+								<li>XL</li>							
+								<li>/</li>
+								<li>XXL</li>
+							</ul>
+						</div>
+					</section>
+					<section class="product-colours">
+						<div class="colour" data-colour="#b82134"></div>
+						<div class="colour" data-colour="#f4ead0"></div>
+						<div class="colour" data-colour="#f1ce55"></div>
+						<div class="colour" data-colour="#4dad5e"></div>
+						<div class="colour" data-colour="#0092c0"></div>					
+						<div class="colour" data-colour="#323238"></div>
+						<div class="colour" data-colour="#ce3b73"></div>
+						<div class="colour" data-colour="#f9b40e"></div>
+						<div class="clearfix"></div>
+					</section>
+					<section class="product-contact">
+						<p>Feel free to <a href="">contact us</a></p>
+					</section>	
+				</div>
+			</div>
+			<div id="contact-form-container">
+				<h2>Do not hesitate to</h2>
+				<h2>ask us&hellip;anything!</h2>
+				<form id="contact-form">
+					<div class="validation-wrapper">
+						<input name="full-name" class="form-control" type="text" placeholder="name">
+						<span class="name validation">please introduce yourself</span>
+						<span class="required">(required)</span>
+					</div>
+					<div class="validation-wrapper">
+						<input name="email" class="form-control"type="text" placeholder="email">
+						<span class="email validation">please tell us/correct your email</span>
+						<span class="required">(required)</span>
+					</div>
+					<textarea name="info" class="form-control" placeholder="Tell us a bit more about your project."></textarea>
+					<input type="submit" value="send">
+				</form>
+				<a class="page-close contact-form" href=""></a>
+			</div>
+		</div>
 		<main>
-			<section class="we-are">
+			<!--<section class="we-are">
 				<h2>Who are we?</h2>
 				<p>Merchyou jako firma, zabývající se distribucí a potiskem textilu, existuje od roku 2008. My, kteří v ní působíme, se pohybujeme více než deset let v odboru a za ta léta dobře víme, že tu zdaleka nejde jen o samotný výsledný tisk motivu na tričko. Sledujeme trendy nejen v Evropě, ale i v zámoří a víme, kam směřují. Náš pracovní team má široký záběr zaměření, od čistě komerčních účelů produkce, po rozmanitá specifika subkulturních skupin. Každá kategorie vyžaduje rozdílný přístup a celkové řešení.Proto jsme schopni zákazníkovi poradit nejen s výběrem značky nejvhodnějšího textilu, ale zároveň s celkovým řešením designu a barevnosti i druhu potisku tak, aby odpovídal požadovanému účelu.</p>
-			</section>
+			</section>-->
 			<section class="we-offer">
-				<h2>We offer</h2>
-				<p>Merchyou jako firma, zabývající se distribucí a potiskem textilu, existuje od roku 2008. My, kteří v ní působíme, se pohybujeme více než deset let v odboru a za ta léta dobře víme, že tu zdaleka Merchyou jako firma, zabývající</p>	
+				<a href="" class="arrow-left"></a>
+				<a href="" class="arrow-right"></a>
+				<div class="wrapper">
+					<h2>We offer</h2>
+					<p>Merchyou jako firma, zabývající se distribucí a potiskem textilu, existuje od roku 2008. My, kteří v ní působíme, se pohybujeme více než deset let v odboru a za ta léta dobře víme, že tu zdaleka Merchyou jako firma, zabývající</p>
+				</div>	
 			</section>
 			<section class="filter">
 				<ul>
-					<li>Filter</li>
+					<li class="cat active">All</li>
 					<li>/</li>
-					<li>Men</li>
+					<li class="cat">Men</li>
 					<li>/</li>
-					<li>Women</li>
-					<li>/</li>
-					<li>Couple</li>
-					<li>/</li>
-					<li>Kids</li>	
+					<li class="cat">Women</li>	
 				</ul>
+				<a class="contact-us" href="">More info please</a>
 			</section>
 			<section class="contact-us">
-				<a href="#">Contact us</a>
-				<div class="clearfix"></div>
+				<a href="">More info please</a>
 			</section>
 			<section class="products">
 				<div class="row">
-					<img width="100%" class="col-sm-6" src="./images/merch/product-1.jpg">
-					<img width="100%" class="col-sm-6" src="./images/merch/product-2.jpg">
+					<img width="100%" class="col-sm-6 col-md-3" src="./images/merch/product-1.jpg">
+					<img width="100%" class="col-sm-6 col-md-3" src="./images/merch/product-2.jpg">
+					<img width="100%" class="col-sm-6 col-md-3" src="./images/merch/product-1.jpg">
+					<img width="100%" class="col-sm-6 col-md-3" src="./images/merch/product-2.jpg">
 				</div>
 			</section>
-		</main>	
+			<section class="filter">
+				<ul>
+					<li class="cat active">All</li>
+					<li>/</li>
+					<li class="cat">Men</li>
+					<li>/</li>
+					<li class="cat">Women</li>	
+				</ul>
+				<a class="contact-us" href="">More info please</a>
+			</section>
+			<section class="contact-us">
+				<a href="">More info please</a>
+			</section>
+		</main>
 		<footer>
 			<ul>
 				<li class="cat">Address</li>
@@ -71,10 +153,11 @@
 			</ul>
 			<div id="copyright">
 				<a href="downloads/Hyped_Prague_Presskit.zip">Download press kit</a>
-				<p>&copy; Copyright &amp; Crafted by us in 2015</p>
+				<p>&copy; Crafted by us in 2015</p>
 			</div>
 			<div class="clearfix"></div>
 		</footer>
 	</div>
+	<script src="js/merch.js"></script>
 </body>
 </html>
