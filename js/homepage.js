@@ -40,6 +40,28 @@ function hideValidation() {
 	$(".validation.name, .validation.email").css("display", "none");
 }
 
+function openForm() {
+	// on smaller displays extend the main section of the page, so the footer is not cut off
+	if (parseInt($(window).width()) <= 440) {
+		$("#footer-info-container").toggleClass("mobile-expand");
+	}
+
+	$("#contact-form-container").toggle();
+
+	$("html, body").animate({
+		scrollTop: $("#contact-form-container").offset().top
+	}, 1000);
+}
+
+function closeForm(e, element) {
+	e.preventDefault();
+	// restore the main section of the page to normal height
+	if (parseInt($(window).width()) <= 440) {
+		$("#footer-info-container").toggleClass("mobile-expand");
+	}
+	element.closest("section").toggle();
+}
+
 (function() {
 
 	/* Hide dummies for image hover blink avoidance */
@@ -56,6 +78,8 @@ function hideValidation() {
 		e.preventDefault();
 
 		toggleNav();
+
+		openForm();
 
 		// animate
 		$("html, body").animate({
@@ -147,25 +171,11 @@ function hideValidation() {
 	});
 
 	$("#form-toggle-button").click(function() {
-		// on smaller displays extend the main section of the page, so the footer is not cut off
-		if (parseInt($(window).width()) <= 440) {
-			$("#footer-info-container").toggleClass("mobile-expand");
-		}
-
-		$("#contact-form-container").toggle();
-
-		$("html, body").animate({
-			scrollTop: $("#contact-form-container").offset().top
-		}, 1000);
+		openForm();
 	});
 
 	$(".page-close.contact-form").click(function(e) {
-		e.preventDefault();
-		// restore the main section of the page to normal height
-		if (parseInt($(window).width()) <= 440) {
-			$("#footer-info-container").toggleClass("mobile-expand");
-		}
-		$(this).closest("section").toggle();
+		closeForm(e, $(this));
 	});
 
 	/* Form submission and popup display */
