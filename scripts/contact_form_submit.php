@@ -49,7 +49,7 @@ if (isset($_POST)) {
 				<li><b>Datum odeslání:</b> " . date ("d. m. Y H:i:s") . "</li>
 				<li><b>Jméno:</b> " . $_POST["full-name"] . "</li>
 				<li><b>E-mail:</b> " . $_POST["email"] . "</li>
-				<li><b>Služba:</b> " . $_POST["service"] . "</li>
+				<li><b>Služba:</b> " . ((empty($_POST["service"])) ? "Nevyplněno" :$_POST["service"]) . "</li>
 				<li><b>Poznámka:</b> " . ((empty($_POST["info"])) ? "Nevyplněno" : $_POST["info"]) . "</li>
 			</ul>
 		";
