@@ -241,7 +241,7 @@ section p {
 	line-height: 110px;
 	text-align: center;
 	margin: 0;
-	font-size: 22px;
+	font-size: 18px;
 }
 
 .product-contact a {
@@ -262,12 +262,26 @@ section p {
 	margin: 0 auto;
 }
 
-#contact-form-container .page-close {
+#contact-form-container .page-close, 
+#form-submit-success .page-close {
 	width: 25px;
 	height: 24px;
 	top: 15px;
 	right: 15px;
 	background-size: contain;
+}
+
+#form-submit-success {
+	padding: 20px;
+	height: 450px;
+	opacity: 1;
+	margin: 0 auto;
+	max-width: 490px;
+	right: 0;
+}
+
+footer {
+	margin-top: 0;
 }
 
 @media only screen and (min-width: 380px) {
@@ -318,7 +332,7 @@ section p {
 	.we-offer .wrapper {
 		width: 510px;
 		margin: 0 auto;
-		background: url(../images/merch/shirt-icon_130x124.png) no-repeat scroll 0 40px;
+		background: url(../images/merch/shirt-icon_130x124.png) no-repeat scroll 0 100px;
 		padding-left: 180px;
 	}
 
@@ -363,6 +377,20 @@ section p {
 
 	section.contact-us {
 		display: none;
+	}
+
+	.product-contact p {
+		font-size: 24px;
+	}
+
+
+	#contact-form-container {
+		min-width: 690px;
+		padding: 50px 35px;
+	}
+
+	#form-submit-success h2 {
+		font-size: 28px;
 	}
 }
 
