@@ -85,14 +85,6 @@ header {
 	min-height: 450px;
 }
 
-header.in .project-background {
-	background-position: -280px center !important;
-}
-
-header.in #project-ewa-farna {
-	background-position: -280px top !important;
-}
-
 header.in #nav-container {
 	right: 320px;
 }
@@ -869,14 +861,6 @@ footer a:visited {
 		padding: 20px 40px;
 	}
 
-	header.in .project-background {
-		background-position: -320px center !important;
-	}
-
-	header.in #project-ewa-farna {
-		background-position: -320px top !important;
-	}
-
 	header.in #nav-container {
 		right: 360px;
 	}
@@ -1013,14 +997,6 @@ footer a:visited {
 	#social-nav .twitt a,
 	#social-nav .instgrm a {
 		background-position: 135px center;
-	}
-
-	header.in .project-background {
-		background-position: -240px center !important;
-	}
-
-	header.in #project-ewa-farna {
-		background-position: -240px top !important;
 	}
 
 	header.in #nav-container {
