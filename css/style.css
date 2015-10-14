@@ -561,6 +561,11 @@ textarea:-ms-input-placeholder {
     color: #fff !important;
 }
 
+#contact-form-container > div {
+	margin: 0 auto;
+	max-width: 490px;
+}
+
 .contact-form-border-container {
 	height: 15px;
 	width: 100%;
