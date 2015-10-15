@@ -36,7 +36,7 @@ body {
 #popup-container {
 	position: absolute;
 	z-index: 3;
-	top: 500px;
+	top: 0;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
@@ -436,5 +436,12 @@ footer {
 	.product .product-info {
 		display: inline-block;
 		max-width: 460px;
+	}
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 700px) {
+	#popup-container {
+		position: fixed;
+		top: 100px;
 	}
 }

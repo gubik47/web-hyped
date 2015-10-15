@@ -23,7 +23,6 @@ function setHeaderHeight() {
 /* Resizes colour boxes to square shape */
 function resizeColourBoxes() {
 	var colourWidth = $(".product .colour").actual("width");
-	//console.log(colourWidth);
 	$(".product .colour").css("height", colourWidth + "px");
 }
 
@@ -53,26 +52,40 @@ function displayMessage(type) {
 	$("#form-submit-success").toggle();
 }
 
-
-(function() {
-	// inital header height setup
+/* Page features initialization */
+function pageInit() {
 	setHeaderHeight();
 	setUpColourBoxes();
+}
+
+/* Adjusts popup position on the screen */
+function setPopupPosition() {
+	var viewportWidth = $(window).innerWidth();
+	var viewportHeight = $(window).innerHeight();
+
+	if (viewportWidth < 1024 || viewportHeight < 700) {
+		// for smaller screens fixed position is disabled
+		// display popup pinned to the top of viewport
+		var offset = Math.floor($(".products").offset().top);
+		$("#popup-container").css("top", window.scrollY + "px");
+	} else {
+		// for larger screens fixed position is enabled
+		// display popup 100 px from top of viewport
+		$("#popup-container").css("top", 100 + "px");
+	}
+}
+
+(function() {
+	pageInit();
 	
 	$(window).resize(resizeColourBoxes);
-
-	// register header resize handler to window resize event
 	$(window).resize(setHeaderHeight);
 
 	/* Handler for opening product popup upon clicking on a product image */
 	$(".products img").click(function() {
 		$("#popup-container .product, #page-cover").show();
-		var offset = Math.floor($(".products").offset().top);
-		$("#popup-container").css("top", offset + "px");
 
-		$("html, body").animate({
-			scrollTop: $("#popup-container").offset().top
-		}, 1000);
+		setPopupPosition();
 	});
 		
 	/* Handler for closing product popup container */
@@ -92,12 +105,8 @@ function displayMessage(type) {
 		e.preventDefault();
 		$("#popup-container .product, #page-cover").hide();
 		$("#popup-container #contact-form-container, #page-cover").show();
-		var offset = Math.floor($(".products").offset().top);
-		$("#popup-container").css("top", offset + "px");
 
-		$("html, body").animate({
-			scrollTop: $("#popup-container").offset().top
-		}, 1000);
+		setPopupPosition();
 	});
 
 	/* Scroll to content by clicking on the arrow in header */
