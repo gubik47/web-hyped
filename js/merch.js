@@ -86,6 +86,26 @@ function closePopup() {
 	$("#popup-container .content, #page-cover").hide();
 }
 
+/* Updates product filter with new selected category */
+function updateFilter() {
+	$(".filter li.cat").removeClass("active");
+	$(this).addClass("active");
+	filterProducts();
+}
+
+/* Filters products based on selected category */
+function filterProducts() {
+	var category = $(".filter .active").html().toLowerCase();
+	if (category == "all") {
+		$(".products img").fadeIn();
+	} else {
+		var categorySelector = ".products ." + category;
+		$(".products img").not(categorySelector).fadeOut(function() {
+			$(categorySelector).fadeIn();
+		});
+	}
+}
+
 (function() {
 	pageInit();
 	
@@ -148,4 +168,7 @@ function closePopup() {
 			}
 		});
 	});
+
+	/* Handler for selecting new category in product filter */
+	$(".filter li.cat").click(updateFilter);
 })();
