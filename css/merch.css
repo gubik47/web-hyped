@@ -184,7 +184,7 @@ section p {
 }
 
 .product-description {
-	padding-bottom: 0;
+	padding-bottom: 25px;
 	background-color: #FFF;
 }
 
@@ -201,6 +201,10 @@ section p {
 
 .product .sizes {
 	margin-top: 20px;
+}
+
+.product .price {
+	color: #F69670;
 }
 
 .product ul {
@@ -330,7 +334,7 @@ footer {
 	.we-offer .wrapper {
 		width: 510px;
 		margin: 0 auto;
-		background: url(../images/merch/shirt-icon_130x124.png) no-repeat scroll 0 100px;
+		background: url(../images/merch/shirt_icon_130x124.png) no-repeat scroll 0 100px;
 		padding-left: 180px;
 	}
 
@@ -420,7 +424,7 @@ footer {
 	}
 
 	.product .product-description {
-		padding: 30px 30px 70px;
+		padding: 30px 30px 0;
 	}
 
 	.product .image {
