@@ -89,7 +89,14 @@ function closePopup() {
 /* Updates product filter with new selected category */
 function updateFilter() {
 	$(".filter li.cat").removeClass("active");
-	$(this).addClass("active");
+
+	var active = $(this).html();
+	$(".filter li.cat").each(function() {
+		if ($(this).html() === active) {
+			$(this).addClass("active");
+		}
+	});
+
 	filterProducts();
 }
 
