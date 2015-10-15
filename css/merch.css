@@ -42,6 +42,10 @@ body {
 	margin: 0 auto;
 }
 
+#popup-container .content {
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
 header {
 	background: #b0ded3 url(../images/merch/hyped_merch_header.png) no-repeat scroll 0 0;
 	background-size: 260px auto;
@@ -425,12 +429,12 @@ footer {
 
 	.product .product-description {
 		padding: 30px 30px 0;
-		height: 286px;
+		height: 288px;
 	}
 
 	.product .image {
 		float: left;
-		max-width: 460px;
+		width: 460px;
 	}
 
 	.product .product-info {

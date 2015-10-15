@@ -63,16 +63,22 @@ function setPopupPosition() {
 	var viewportWidth = $(window).innerWidth();
 	var viewportHeight = $(window).innerHeight();
 
-	if (viewportWidth < 1024 || viewportHeight < 700) {
-		// for smaller screens fixed position is disabled
+	if (viewportWidth <= 490) {
+		// for small screens fixed position is disabled
 		// display popup pinned to the top of viewport
-		var offset = Math.floor($(".products").offset().top);
-		$("#popup-container").css("top", window.scrollY + "px");
+		var offset = window.scrollY;
+	} else if (viewportWidth < 1024 || viewportHeight < 700) {
+		// for medium screens pin to the top of the products section
+		var offset = $(".products").offset().top;
+		$("html, body").animate({
+			scrollTop: $(".products").offset().top
+		}, 1000);
 	} else {
 		// for larger screens fixed position is enabled
 		// display popup 100 px from top of viewport
-		$("#popup-container").css("top", 100 + "px");
+		var offset = 100;
 	}
+	$("#popup-container").css("top", offset + "px");
 }
 
 /* Hides popup */
