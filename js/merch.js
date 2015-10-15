@@ -93,6 +93,7 @@ function setPopupPosition() {
 /* Hides popup */
 function closePopup() {
 	$("#popup-container .content, #page-cover").hide();
+	//window.location.href = trimUrl();
 }
 
 /* Updates product filter with new selected category */
@@ -122,10 +123,18 @@ function filterProducts() {
 	}
 }
 
+/* Trims URL of all hashes */
+function trimUrl() {
+	var hashIndex = window.location.href.indexOf("#");
+	if (hashIndex != -1) {
+		return trimmedUrl = window.location.href.substring(0, hashIndex);
+	}
+	return "";
+}
+
 /* Updates URL with product ID hash at the end */
 function updateUrl(productId) {
-	var hashIndex = window.location.href.indexOf("#");
-	var trimmedUrl = window.location.href.substring(0, hashIndex);
+	var trimmedUrl = trimUrl();
 	window.location.href = trimmedUrl + "#" + productId;
 }
 
