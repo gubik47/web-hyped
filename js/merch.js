@@ -52,10 +52,19 @@ function displayMessage(type) {
 	$("#form-submit-success").toggle();
 }
 
-/* Page features initialization */
+/* Page features initialization
+   Opens product popup if supplied product id hash in URL
+*/
 function pageInit() {
 	setHeaderHeight();
 	setUpColourBoxes();
+
+	// find product id hash in URL
+	var hashIndex = window.location.href.indexOf("#");
+	if (hashIndex != -1) {
+		var productId = window.location.href.substring(hashIndex + 1);
+		openProductPopup(productId);
+	}
 }
 
 /* Adjusts popup position on the screen */
@@ -113,6 +122,20 @@ function filterProducts() {
 	}
 }
 
+/* Updates URL with product ID hash at the end */
+function updateUrl(productId) {
+	var hashIndex = window.location.href.indexOf("#");
+	var trimmedUrl = window.location.href.substring(0, hashIndex);
+	window.location.href = trimmedUrl + "#" + productId;
+}
+
+/* Opens a product popup with specific ID */
+function openProductPopup(productId) {
+	$("#popup-container .product#" + productId + ", #page-cover").show();
+	setPopupPosition();
+	updateUrl(productId);
+}
+
 (function() {
 	pageInit();
 	
@@ -121,8 +144,8 @@ function filterProducts() {
 
 	/* Handler for opening product popup upon clicking on a product image */
 	$(".products img").click(function() {
-		$("#popup-container .product, #page-cover").show();
-		setPopupPosition();
+		var productId = $(this).data("id");
+		openProductPopup(productId);
 	});
 
 	/* Handler form opening contact form */
