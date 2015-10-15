@@ -355,7 +355,7 @@ footer {
 
 	.we-offer a.arrow-right {
 		transform: rotate(180deg);
-		right: 80px;
+		right: 70px;
 	}
 
 	.filter {
@@ -415,7 +415,7 @@ footer {
 
 	.we-offer,
 	.we-are {
-		padding: 80px;
+		padding: 80px 70px;
 	}
 
 	.we-offer .wrapper {
