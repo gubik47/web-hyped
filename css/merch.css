@@ -55,14 +55,14 @@ header .scroll-arrow {
 }
 
 header .hyped-logo {
-	background: url(../images/merch/hyped_logo_80x80.png) no-repeat scroll 0 0;
-	background-size: contain;
-	width: 40px;
-	height: 40px;
+	background: url(../images/merch/hyped_logo_33x40.png) no-repeat scroll 0 0;
 	display: inline-block;
 	position: absolute;
+	width: 33px;
+	height: 40px;
 	top: 20px;
 	left: 20px;
+	outline: none;
 }
 
 section {
@@ -314,10 +314,8 @@ footer {
 	}
 
 	header .hyped-logo {
-		width: 80px;
-		height: 80px;
-		top: 30px;
-		left: 30px;
+		top: 50px;
+		left: 45px;
 	}
 
 	section h2 {
