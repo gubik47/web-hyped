@@ -75,6 +75,11 @@ function setPopupPosition() {
 	}
 }
 
+/* Hides popup */
+function closePopup() {
+	$("#popup-container .content, #page-cover").hide();
+}
+
 (function() {
 	pageInit();
 	
@@ -84,29 +89,29 @@ function setPopupPosition() {
 	/* Handler for opening product popup upon clicking on a product image */
 	$(".products img").click(function() {
 		$("#popup-container .product, #page-cover").show();
+		setPopupPosition();
+	});
+
+	/* Handler form opening contact form */
+	$(".contact-us a, .product-contact a, a.contact-us").click(function(event) {
+		event.preventDefault();
+		$("#popup-container .product").hide();
+		$("#popup-container #contact-form-container, #page-cover").show();
 
 		setPopupPosition();
 	});
 		
-	/* Handler for closing product popup container */
-	$(".page-close.product-popup").click(function(e) {
-		e.preventDefault();
-		$("#popup-container .product, #page-cover").hide();
+	/* Handler for closing popup container on exit button click*/
+	$(".content .page-close").click(function(event) {
+		event.preventDefault();
+		closePopup();
 	});	
 
-	/* Handler for closing form popup container */
-	$(".page-close.contact-form").click(function(e) {
-		e.preventDefault();
-		$("#popup-container #contact-form-container, #page-cover").hide();
-	});	
-
-	/* Handler form opening contact form */
-	$(".contact-us a, .product-contact a, a.contact-us").click(function(e) {
-		e.preventDefault();
-		$("#popup-container .product, #page-cover").hide();
-		$("#popup-container #contact-form-container, #page-cover").show();
-
-		setPopupPosition();
+	/* If clicked anywhere else but on the popup, close it */
+	$("#page-cover, #popup-container").click(function(event) {
+		if (!$(event.target).closest(".content").length) {
+			closePopup();
+		}
 	});
 
 	/* Scroll to content by clicking on the arrow in header */
@@ -114,12 +119,6 @@ function setPopupPosition() {
 		$("html, body").animate({
 			scrollTop: $(".we-offer").offset().top
 		}, 1000);
-	});
-
-	/* Handler for closing form popup container */
-	$("#form-submit-success .page-close").click(function(e) {
-		e.preventDefault();
-		$("#popup-container #form-submit-success, #page-cover").hide();
 	});
 
 	/* Form submission and popup display */
