@@ -94,6 +94,11 @@ function setPopupPosition() {
 function closePopup() {
 	$("#popup-container .content, #page-cover").hide();
 	//window.location.href = trimUrl();
+
+	// slice off the remaining '#' in HTML5:    
+	if (typeof window.history.replaceState == 'function') {
+		history.replaceState({}, '', trimUrl());
+	}
 }
 
 /* Updates product filter with new selected category */
@@ -140,9 +145,18 @@ function updateUrl(productId) {
 
 /* Opens a product popup with specific ID */
 function openProductPopup(productId) {
-	$("#popup-container .product#" + productId + ", #page-cover").show();
-	setPopupPosition();
-	updateUrl(productId);
+	var product = $("#popup-container .product#" + productId); 
+	if (product.length !== 0) {
+		product.show();
+		$("#page-cover").show();
+		setPopupPosition();
+		updateUrl(productId);
+	} else {
+		// slice off the remaining '#' in HTML5:    
+		if (typeof window.history.replaceState == "function") {
+			history.replaceState({}, "", trimUrl());
+		}
+	}
 }
 
 (function() {
