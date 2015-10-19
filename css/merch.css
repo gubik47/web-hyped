@@ -383,11 +383,19 @@ footer {
 	.filter {
 		font-size: 20px;
 	}
+
+	.we-offer .wrapper {
+		height: 330px;
+	}
 }
 
 @media only screen and (min-width: 580px) {
 	header {
 		background-size: 460px auto;
+	}
+
+	.we-offer .wrapper {
+		height: 300px;
 	}
 }
 
@@ -435,16 +443,20 @@ footer {
 		height: 350px;
 	}
 
+	.we-offer .wrapper h2 {
+		padding-top: 30px;
+	}
+
 	.we-offer .slide.offer .wrapper {
 		background: url(../images/merch/shirt_icon_126x128.png) no-repeat scroll 0 100px;
 	}
 
 	.we-offer .slide.use .wrapper {
-		background: url(../images/merch/teabag_icon_90x208.png) no-repeat scroll 0 30px;
+		background: url(../images/merch/teabag_icon_90x208.png) no-repeat scroll 0 40px;
 	}
 
 	.we-offer .slide.love .wrapper {
-		background: url(../images/merch/heart_icon_128x108.png) no-repeat scroll 0 50px;
+		background: url(../images/merch/heart_icon_128x108.png) no-repeat scroll 0 70px;
 	}
 
 	.we-offer a {
@@ -518,7 +530,7 @@ footer {
 	}
 
 	.realization p {
-		width: 80%;
+		width: 79.7%;
 		font-size: 28px;
 	}
 
@@ -585,7 +597,7 @@ footer {
 	}
 
 	.realization .proj-gallery a:first-child img {
-		margin-right: 5%;
+		margin-right: 4.5%;
 		margin-bottom: 0;
 	}
 
@@ -598,6 +610,14 @@ footer {
 @media only screen and (min-width: 1400px) {
 	.we-offer .wrapper {
 		width: 1000px; 
+	}
+
+	.we-offer .slide {
+		padding: 60px 70px;
+	}
+
+	.we-offer .wrapper h2 {
+		padding-top: 45px;
 	}
 }
 
