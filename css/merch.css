@@ -69,6 +69,27 @@ header .hyped-logo {
 	outline: none;
 }
 
+.language-select {
+	position: absolute;
+	top: 25px;
+	right: 20px;
+	color: #FFF;
+	font-size: 24px;
+}
+
+.language-select a {
+	color: #f69670;
+}
+
+.language-select a.active {
+	color: #FFF;
+}
+
+.language-select a:hover,
+.language-select a:focus {
+	color: #FFF;
+}
+
 section {
 	padding: 20px;
 }
@@ -345,6 +366,12 @@ footer {
 	header .hyped-logo {
 		top: 50px;
 		left: 45px;
+	}
+
+	.language-select {
+		top: 45px;
+		right: 45px;
+		font-size: 28px;
 	}
 
 	section h2 {
