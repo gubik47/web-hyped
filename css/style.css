@@ -1059,6 +1059,10 @@ footer ul.social a:focus  {
 		background-position: 135px center;
 	}
 
+	#social-nav .fcbk a {
+		background-position: 145px center;
+	}
+
 	header.in #nav-container {
 		right: 270px;
 	}
