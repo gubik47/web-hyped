@@ -805,10 +805,39 @@ footer #copyright {
 	text-align: right;
 }
 
+footer #copyright p {
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
 footer a:hover,
 footer a:focus,
 footer a:visited {
 	color: #f69670;
+}
+
+footer ul.social {
+	margin-top: 5px;
+	float: none;
+}
+
+footer ul.social li {
+	display: inline-block;
+	padding-top: 0;
+}
+
+footer ul.social li:not(:last-child):after {
+	content: "/";
+	padding-left: 5px;
+}
+
+footer ul.social a {
+	color: #FFF;
+}
+
+footer ul.social a:hover,
+footer ul.social a:focus  {
+	color: #F69670;
 }
 
 /* FOOTER INFO STYLES END */
@@ -973,10 +1002,6 @@ footer a:visited {
 	footer ul:last-child {
 		margin-right: 0;
 	}
-
-	footer #copyright {
-		margin-top: 35px;
-	}
 }
 
 @media only screen and (max-width: 440px) {
@@ -1065,6 +1090,14 @@ footer a:visited {
 
 	footer {
 		font-size: 12px;
+	}
+
+	footer ul.social {
+		font-size: 11px;
+	}
+
+	footer ul.social li:not(:last-child):after {
+		padding-left: 4px;
 	}
 }
 

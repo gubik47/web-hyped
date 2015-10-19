@@ -127,7 +127,7 @@ section p {
 
 .we-offer .wrapper {
 	padding: 20px;
-	height: 310px;
+	height: 390px;
 }
 
 .we-offer a {
@@ -432,6 +432,7 @@ footer {
 		margin: 0 auto;
 		padding: 0;
 		padding-left: 180px;
+		height: 350px;
 	}
 
 	.we-offer .slide.offer .wrapper {
@@ -549,7 +550,6 @@ footer {
 
 	.we-offer .wrapper {
 		width: 810px;
-		height: 350px;
 		padding-left: 210px;
 	}
 
@@ -585,12 +585,12 @@ footer {
 	}
 
 	.realization .proj-gallery a:first-child img {
-		margin-right: 4%;
+		margin-right: 5%;
 		margin-bottom: 0;
 	}
 
 	.realization .proj-gallery a:last-child img {
-		margin-left: 4%;
+		margin-left: 4.5%;
 		margin-top: 0;
 	}
 }
