@@ -107,6 +107,7 @@ section p {
 	padding: 0;
 	position: relative;
 	overflow: hidden;
+	transition: all 0.5s ease 0s;
 }
 
 .we-offer .slide {
@@ -385,9 +386,20 @@ footer {
 	.we-offer .wrapper {
 		width: 510px;
 		margin: 0 auto;
-		background: url(../images/merch/shirt_icon_130x124.png) no-repeat scroll 0 100px;
 		padding: 0;
 		padding-left: 180px;
+	}
+
+	.we-offer .slide.offer .wrapper {
+		background: url(../images/merch/shirt_icon_126x128.png) no-repeat scroll 0 100px;
+	}
+
+	.we-offer .slide.use .wrapper {
+		background: url(../images/merch/teabag_icon_90x208.png) no-repeat scroll 0 30px;
+	}
+
+	.we-offer .slide.love .wrapper {
+		background: url(../images/merch/heart_icon_128x108.png) no-repeat scroll 0 50px;
 	}
 
 	.we-offer a {
@@ -500,6 +512,12 @@ footer {
 	.product .product-info {
 		display: inline-block;
 		max-width: 460px;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	.we-offer .wrapper {
+		width: 1000px; 
 	}
 }
 

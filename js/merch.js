@@ -182,7 +182,7 @@ function prevSlide() {
         	nextSlide.css("left", 0);
         })
         nextSlide.addClass("active");
-
+		setWeOfferHeight();
         $(nextSlide).prependTo("#slides-container");
     });
 }
@@ -203,7 +203,7 @@ function nextSlide() {
 	    	prevSlide.css("left", "0");
 	    });
 	    prevSlide.addClass("active");
-
+	    setWeOfferHeight();
         $(this).appendTo("#slides-container");
     });
 }
