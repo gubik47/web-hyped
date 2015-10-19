@@ -85,6 +85,7 @@ section p {
 .we-offer {
 	padding: 0;
 	position: relative;
+	overflow: hidden;
 }
 
 .we-offer .slide {
