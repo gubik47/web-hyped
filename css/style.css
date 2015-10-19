@@ -314,6 +314,7 @@ nav ul {
 nav a {
 	display: block;
 	padding: 5px 0 5px 25px;
+	outline: none;
 }
 
 #nav a:hover, 
@@ -353,6 +354,7 @@ p.hash-tag {
 #social-nav a {
 	display: block;
 	padding: 0;
+	outline: none;
 }
 
 #social-nav p {
@@ -364,6 +366,15 @@ p.hash-tag {
 #social-nav p + p {
 	font-size: 12px;
 	font-style: italic;
+}
+
+#social-nav .fcbk a {
+	background: url(../images/icons/icon_facebook.png) 185px center no-repeat scroll;
+}
+
+#social-nav .fcbk:hover,
+#social-nav .fcbk:focus {
+	background-color: #3A5795;
 }
 
 #social-nav .lnkdin a {
@@ -697,8 +708,8 @@ textarea:-ms-input-placeholder {
 
 #footer-info-container td {
 	border: 2px solid #FFF;
-	width: 120px;
-	height: 120px;
+	width: 100px;
+	height: 100px;
 	text-align: center;
 }
 
@@ -716,6 +727,12 @@ textarea:-ms-input-placeholder {
 	display: inline-block;
 	width: 50px;
 	height: 50px;
+	outline: none;
+}
+
+#dummies .fcbk {
+	background: url(../images/icons/icon_facebook_green.svg) 0 0 no-repeat scroll;
+	background-size: 48px 48px;
 }
 
 #dummies .lnkdin {
@@ -730,6 +747,19 @@ textarea:-ms-input-placeholder {
 
 #dummies .instgrm {
 	background: url(../images/icons/icon_instagram_green.svg) 0 0 no-repeat scroll;
+	background-size: 48px 48px;
+}
+
+#footer-info-container td.fcbk a {
+	background: url(../images/icons/icon_facebook_white.svg) 0 0 no-repeat scroll;
+	background-size: 48px 48px;
+
+	transition: none;
+}
+
+#footer-info-container td.fcbk a:hover,
+#footer-info-container td.fcbk a:focus {
+	background: url(../images/icons/icon_facebook_green.svg) 0 0 no-repeat scroll;
 	background-size: 48px 48px;
 }
 
@@ -1075,8 +1105,8 @@ footer ul.social a:focus  {
 	}
 
 	#footer-info-container td {
-		width: 93.3px;
-		height: 93.3px;
+		width: 75px;
+		height: 75px;
 		border: 1px solid #FFF;
 	}
 
