@@ -127,6 +127,7 @@ section p {
 
 .we-offer .wrapper {
 	padding: 20px;
+	height: 310px;
 }
 
 .we-offer a {
@@ -484,6 +485,7 @@ footer {
 
 	.we-offer .wrapper {
 		width: 810px;
+		height: 350px;
 		padding-left: 210px;
 	}
 
