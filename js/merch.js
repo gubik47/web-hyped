@@ -222,7 +222,7 @@ function nextSlide() {
 	});
 
 	/* Handler form opening contact form */
-	$(".contact-us a, .product-contact a, a.contact-us").click(function(event) {
+	$(".contact-us a, .product-contact a, a.contact-us, .realization p").click(function(event) {
 		event.preventDefault();
 		$("#popup-container .product").hide();
 		$("#popup-container #contact-form-container, #page-cover").show();
