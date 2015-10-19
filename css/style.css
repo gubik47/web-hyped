@@ -105,6 +105,18 @@ header.in #main-logo-container {
 	height: 25px;
 }
 
+header .what-we-do {
+	position: absolute;
+	z-index: 2;
+	left: 40px;
+	bottom: 300px;
+	text-transform: uppercase;
+	color: #F39773;
+	letter-spacing: 3px;
+	font-family: "Roboto Light", sans-serif;
+	display: none;
+}
+
 #nav-container {
 	position: absolute;
 	top: 41px;
@@ -126,6 +138,19 @@ header.in #main-logo-container {
 	width: 100%;
 	min-height: 450px;
 	position: relative;
+}
+
+.project-name {
+	position: absolute;
+	z-index: 2;
+	bottom: 50px;
+	right: 60px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Roboto Light", sans-serif;
+	color: #444444;
+	width: 135px;
+	display: none;
 }
 
 .project-background {
@@ -246,7 +271,7 @@ ul.project-focus li.true:before {
 }
 
 .rslides_nav.prev {
-	margin-right: 20px;
+	margin-right: 135px;
 }
 
 .hp .rslides_nav.prev,
@@ -958,6 +983,10 @@ footer ul.social a:focus  {
 		display: block;
 	}
 
+	header .what-we-do {
+		display: block;
+	}
+
 	.project-title {
 		left: 40px;
 		margin: 0;
@@ -975,7 +1004,8 @@ footer ul.social a:focus  {
 
 @media only screen and (min-width: 990px) {
 
-	header:hover .hp.project-switch {
+	header:hover .hp.project-switch,
+	header:hover .project-name {
 		display: block;
 	}
 
