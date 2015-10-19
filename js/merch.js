@@ -20,6 +20,11 @@ function setHeaderHeight() {
 	$("header").css("height", windowHeight + "px");
 };
 
+/* Sets height of we offer section to match its contents */
+function setWeOfferHeight() {
+	$("section.we-offer").css("height", $(".slide.active").innerHeight() + "px");
+}
+
 /* Resizes colour boxes to square shape */
 function resizeColourBoxes() {
 	var colourWidth = $(".product .colour").actual("width");
@@ -65,6 +70,8 @@ function pageInit() {
 		var productId = window.location.href.substring(hashIndex + 1);
 		openProductPopup(productId);
 	}
+
+	$("section.we-offer").css("height", $(".slide.active").innerHeight() + "px");
 }
 
 /* Adjusts popup position on the screen */
@@ -159,11 +166,54 @@ function openProductPopup(productId) {
 	}
 }
 
+/* Displays next slide in We offer section */
+function prevSlide() {
+	$(".slide.active").animate({
+        left: "100%"
+    }, 500, function() {
+    	$(this).removeClass("active");
+        $(this).css("left", "-100%");
+
+        var nextSlide = $(this).siblings(":last");
+        nextSlide.css("left", "-100%");
+        nextSlide.animate({
+        	left: "0"
+        }, function() {
+        	nextSlide.css("left", 0);
+        })
+        nextSlide.addClass("active");
+
+        $(nextSlide).prependTo("#slides-container");
+    });
+}
+
+/* Displays previous slide in We offer section */
+function nextSlide() {
+	$(".slide.active").animate({
+        left: "-100%"
+    }, 500, function() {
+    	$(this).removeClass("active");
+        $(this).css("left", "100%");
+
+       	var prevSlide = $(this).next();
+       	prevSlide.css("left", "100%");
+	    prevSlide.animate({
+	    	left: "0"
+	    }, function() {
+	    	prevSlide.css("left", "0");
+	    });
+	    prevSlide.addClass("active");
+
+        $(this).appendTo("#slides-container");
+    });
+}
+
 (function() {
 	pageInit();
 	
 	$(window).resize(resizeColourBoxes);
 	$(window).resize(setHeaderHeight);
+	$(window).resize(setWeOfferHeight);
 
 	/* Handler for opening product popup upon clicking on a product image */
 	$(".products img").click(function() {
@@ -224,4 +274,26 @@ function openProductPopup(productId) {
 
 	/* Handler for selecting new category in product filter */
 	$(".filter li.cat").click(updateFilter);
+
+	/* We offer slides functionality */
+	$(".arrow-left").click(function(event) {
+		event.preventDefault();
+		nextSlide();
+	});	
+
+	$(".arrow-right").click(function(event) {
+		event.preventDefault();
+		prevSlide();
+	});
+
+	/* swipe support for touch devices */
+	$("section.we-offer").swipe({
+		swipeLeft: function() {
+			$(".arrow-left").click();
+		},
+
+		swipeRight: function() {
+			$(".arrow-right").click();
+		}
+	});
 })();

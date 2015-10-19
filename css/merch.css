@@ -83,8 +83,27 @@ section p {
 }
 
 .we-offer {
-	background-color: #FFF;
+	padding: 0;
 	position: relative;
+}
+
+.we-offer .slide {
+	background-color: #FFF;
+	position: absolute;
+	z-index: 2;
+}
+
+.we-offer .slide {
+	left: 100%;
+	width: 100%;
+}
+
+.we-offer .slide.active {
+	left: 0;
+}
+
+.we-offer .wrapper {
+	padding: 20px;
 }
 
 .we-offer a {
@@ -331,8 +350,7 @@ footer {
 		font-size: 32px;
 	}
 
-	.we-offer,
-	.we-are {
+	.we-offer .slide {
 		padding: 40px;
 	}
 
@@ -340,6 +358,7 @@ footer {
 		width: 510px;
 		margin: 0 auto;
 		background: url(../images/merch/shirt_icon_130x124.png) no-repeat scroll 0 100px;
+		padding: 0;
 		padding-left: 180px;
 	}
 
@@ -352,11 +371,16 @@ footer {
 		top: 0;
 		bottom: 0;
 		margin: auto;
+		z-index: 3;
+	}
+
+	.we-offer a.arrow-left {
+		left: 50px;
 	}
 
 	.we-offer a.arrow-right {
 		transform: rotate(180deg);
-		right: 70px;
+		right: 50px;
 	}
 
 	.filter {
@@ -414,14 +438,21 @@ footer {
 		font-size: 24px;
 	}
 
-	.we-offer,
-	.we-are {
+	.we-offer .slide {
 		padding: 80px 70px;
 	}
 
 	.we-offer .wrapper {
 		width: 810px;
 		padding-left: 210px;
+	}
+
+	.we-offer a.arrow-left {
+		left: 70px;
+	}
+
+	.we-offer a.arrow-right {
+		right: 70px;
 	}
 
 	.product {
