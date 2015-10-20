@@ -1252,17 +1252,15 @@ footer ul.social a:focus  {
 
 /* WE ARE STYLES */
 
-#site-cover-container {
-	position: absolute;
-	z-index: 10;
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: none;
+#about-us-wrapper #contact-form-container {
+	display: block;
+	position: static;
+	margin-top: 0;
 }
 
-#site-cover-container.slide-in {
-	display: block;
+#about-us-wrapper #form-submit-success {
+	position: static;
+	margin-top: 0;
 }
 
 #about-us {
@@ -1277,22 +1275,60 @@ footer ul.social a:focus  {
 #about-us h1 {
 	font-size: 26px;
 	text-transform: uppercase;
-	padding: 40px 0;
+	padding: 20px 0;
+	margin-top: 50px;
+}
+
+#about-us h1:first-child {
+	margin-top: 100px;
 }
 
 #about-us p {
 	max-width: 430px;
 	display: inline-block;
+	line-height: 1.7;
+}
+
+#about-us .circle-container {
+	display: flex;
+	flex-direction: row ltr;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 280px;
+	margin: 30px auto 0 auto;
+}
+
+#about-us .circle {
+	width: 80px;
+	height: 80px;
+	border-radius: 50px;
+	background-color: #FFF;
+	display: inline-block;
 }
 
 #about-us .clients-container {
-	max-width: 640px;
+	max-width: 1000px;
 	display: inline-block;
 }
 
 #about-us img {
 	padding-bottom: 60px;
 	width: 90%;
+}
+
+#about-us #suitart-logo {
+	width: 50%;
+}
+
+#about-us ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#about-us li {
+	text-transform: uppercase;
+	padding: 3px;
 }
 
 .page-close {
@@ -1318,12 +1354,24 @@ footer ul.social a:focus  {
 	#about-us img {
 		width: 100%;
 	}
+
+	#about-us .circle-container {
+		width: 300px;
+	}
 }
 
 @media only screen and (min-width: 992px) {
 	
 	img#andel-logo {
 		margin-top: 15px;
+	}
+
+	img#farna-logo {
+		margin-top: 40px;
+	}	
+
+	img#suitart-logo {
+		margin-top: -10px;
 	}
 	
 	#about-us img.left {

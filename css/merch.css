@@ -69,7 +69,7 @@ header .hyped-logo {
 	outline: none;
 }
 
-.language-select {
+.merch-language-select {
 	position: absolute;
 	top: 25px;
 	right: 20px;
@@ -77,16 +77,16 @@ header .hyped-logo {
 	font-size: 24px;
 }
 
-.language-select a {
+.merch-language-select a {
 	color: #f69670;
 }
 
-.language-select a.active {
+.merch-language-select a.active {
 	color: #FFF;
 }
 
-.language-select a:hover,
-.language-select a:focus {
+.merch-language-select a:hover,
+.merch-language-select a:focus {
 	color: #FFF;
 }
 
@@ -421,7 +421,7 @@ footer {
 		left: 45px;
 	}
 
-	.language-select {
+	.merch-language-select {
 		top: 45px;
 		right: 45px;
 		font-size: 28px;

@@ -101,7 +101,7 @@ function closeForm(e, element) {
 	});
 
 	/* Sliding behaviour of We Are link */
-	$("#nav-link-about, #qoute-link-about").click(function(e) {
+	/*$("#nav-link-about, #qoute-link-about").click(function(e) {
 		// prevent default anchor click behavior
 		e.preventDefault();
 
@@ -135,7 +135,7 @@ function closeForm(e, element) {
 			setCoverHeight();
 			$("#site-cover-container").slideToggle({ duration: 600 });
 		}
-	});
+	});*/
 
 	// SelectBox plugin behaviour, delay amount base on select size
 	$("#jquery-select").selectbox({
@@ -205,7 +205,9 @@ function closeForm(e, element) {
 		e.preventDefault();
 		$("#form-submit-success").toggle();
 		// scroll to top if form was successfully submitted
-		if ($(this).hasClass("success")) {
+		if ($("body").hasClass("about-us")) {
+			window.location.href = "index";
+		} else if ($(this).hasClass("success")) {
 			// restore the main section of the page to normal height
 			if (parseInt($(window).width()) <= 440) {
 				$("#footer-info-container").toggleClass("mobile-expand");

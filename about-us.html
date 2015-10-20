@@ -1,21 +1,114 @@
-<div id="about-us" class="site-cover">
-	<h1>We love</h1>
-	<p>beautiful things, that's a fact. What's a beauty?<br>You know when you see it...<br>
-     We bring that feeling into everything we do so you and your customers can fall in love as well.
-     We deliver complete solutions in branding / webdesign / merchandising and marketing, with love.</p>
-	<h1>We had sexy times with</h1>
-	<div class="clients-container">
-		<div class="row">
-			<div class="col-md-6">
-				<img class="left client-logo" src="images/lewron_logo_small.png">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About us</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[if IE]><link rel="shortcut icon" href="images/icons/favicon.ico"><![endif]-->
+	<link rel="icon" href="images/icons/favicon.ico">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.selectbox.css">
+	<link rel="stylesheet" href="css/responsiveslides.css">
+
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+<body class="about-us">
+	<div id="about-us-wrapper">
+		<div id="about-us" class="site-cover">
+			<h1>We love</h1>
+			<p>beautiful things, that's a fact. What's a beauty? You know when you see it... We bring that feeling into everything we do so you and your customers can fall in love as well. We deliver complete solutions in branding / webdesign / merchandising and marketing, with love.</p>
+			<div class="circle-container">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
 			</div>
-			<div class="col-md-6">
-				<img class="right client-logo" id="andel-logo" src="images/andel_logo_small.png">
+			<h1>We do</h1>
+			<ul>
+				<li>Design</li>
+				<li>Branding</li>
+				<li>Merchandising</li>
+				<li>Campaingn</li>
+				<li>WEB / UI / UX</li>
+			</ul>
+			<h1>Clients</h1>
+			<div class="clients-container">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="left client-logo" src="images/lewron_logo_small.png">
+					</div>
+					<div class="col-md-4">
+						<img class="right client-logo" id="farna-logo" src="images/farna_logo_small.png">
+					</div>
+					<div class="col-md-4">
+						<img class="right client-logo" id="andel-logo" src="images/andel_logo_small.png">
+					</div>					
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<img class="right client-logo" src="images/bontonland_logo_small.png">
+					</div>
+					<div class="col-md-4">
+						<img class="right client-logo" id="suitart-logo" src="images/suitart_logo_small.png">
+					</div>					
+				</div>
 			</div>
-		</div>
+			<a class="page-close about-us" href="index"></a>
+		</div>	
+		<!-- Zig zag border holder element -->
+		<div class="qoute-border-container"></div>
+		<section>
+			<section id="contact-form-container">
+				<div>
+					<h2>Do not hesitate to</h2>
+					<h2>ask us&hellip;anything!</h2>
+					<form id="contact-form">
+						<select name="service" id="jquery-select" class="form-control">
+							<option id="option-placeholder" disabled selected>Choose a service</option>
+							<option value="Design">Design</option>
+							<option value="Branding">Branding</option>
+							<option value="Merchandising">Merchandising</option>
+							<option value="Campaign">Campaign</option>
+							<option value="WEB / UI / UX">WEB / UI / UX</option>
+							<option value="Case study">Case study</option>
+							<option value="E-shop">E-shop</option>
+	        				<option value="Anything">Anything</option>
+						</select>
+						<div class="validation-wrapper">
+							<input name="full-name" class="form-control" type="text" placeholder="name">
+							<span class="name validation">please introduce yourself</span>
+							<span class="required">(required)</span>
+						</div>
+						<div class="validation-wrapper">
+							<input name="email" class="form-control"type="text" placeholder="email">
+							<span class="email validation">please tell us/correct your email</span>
+							<span class="required">(required)</span>
+						</div>
+						<textarea name="info" class="form-control" placeholder="Tell us a bit more about your project."></textarea>
+						<input type="submit" value="send">
+					</form>
+				</div>
+			</section>
+			<section id="form-submit-success">
+				<div>
+					<h2>High five, you've made it.</h2>
+					<h2>First step towards success.</h2>		
+				</div>
+				<a class="return" href="index">View portfolio</a>
+				<a class="page-close contact-form" href=""></a>
+			</section>
+		</section>
 	</div>
-	<a class="page-close about-us" href="index.html"></a>
-</div>	
-<!-- Zig zag border holder element -->
-<div class="qoute-border-container"></div>
+
+	<script src="js/jquery.selectbox-0.2.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/jquery.hoverIntent.minified.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/homepage.js"></script>
+</body>
+</html>
+
 
