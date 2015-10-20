@@ -102,7 +102,7 @@
 
 /* STUDENT LABEL GALLERY */
 #sl-1 {
-	background-image: url(../images/projects/sl/sl_1_640x1100.png);
+	background: url(../images/projects/sl/sl_1_640x1100.png) no-repeat scroll 0 top;
 }
 #sl-2 {
 	background-image: url(../images/projects/sl/sl_2_640x1100.png);

@@ -185,7 +185,7 @@ function closeForm(e, element) {
 
 		hideValidation();
 		// AJAX form submission
-		$.post("./scripts/contact_form_submit.php", form.serialize(), function(data) {
+		$.post("../scripts/contact_form_submit.php", form.serialize(), function(data) {
 			var data = JSON.parse(data);
 			if (data.res == "s") {
 				// success

@@ -139,7 +139,7 @@ header.in #main-logo-container {
 	background: url(../images/icons/eng_flag.png) no-repeat scroll 0 0;
 }
 
-.language-select div.cz {
+.language-select div.cs {
 	background: url(../images/icons/cz_flag.png) no-repeat scroll 0 0;
 }
 
@@ -310,6 +310,10 @@ ul.project-focus li.true:before {
 
 .rslides_nav.prev {
 	margin-right: 135px;
+}
+
+.pr .rslides_nav.prev {
+	margin-right: 20px;
 }
 
 .hp .rslides_nav.prev,
