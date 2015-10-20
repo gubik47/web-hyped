@@ -183,6 +183,8 @@ function prevSlide() {
         })
         nextSlide.addClass("active");
 
+        decCounter();
+
         $(nextSlide).prependTo("#slides-container");
     });
 }
@@ -204,8 +206,32 @@ function nextSlide() {
 	    });
 	    prevSlide.addClass("active");
 
+	    incCounter();
+
         $(this).appendTo("#slides-container");
     });
+}
+
+/* Moves slide counter to the right */
+function incCounter() {
+	var active = $(".slide-counter li.active");
+	active.removeClass("active");
+	if (active.is(":last-child")) {
+		$(".slide-counter li:first-child").addClass("active");
+	} else {
+		active.next().addClass("active");
+	}
+}
+
+/* Moves slide counter to the left */
+function decCounter() {
+	var active = $(".slide-counter li.active");
+	active.removeClass("active");
+	if (active.is(":first-child")) {
+		$(".slide-counter li:last-child").addClass("active");
+	} else {
+		active.prev().addClass("active");
+	}
 }
 
 (function() {
