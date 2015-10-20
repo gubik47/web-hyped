@@ -82,7 +82,7 @@ header {
 	transition: all 0.5s ease 0s;
 	overflow: hidden;
 	width: 100%;
-	min-height: 450px;
+	min-height: 600px;
 }
 
 header.in #nav-container {
@@ -174,7 +174,7 @@ header .what-we-do {
 
 .project-container {
 	width: 100%;
-	min-height: 450px;
+	min-height: 600px;
 	position: relative;
 }
 
@@ -193,7 +193,7 @@ header .what-we-do {
 
 .project-background {
 	transition: all 0.5s ease 0s;
-	min-height: 450px;
+	min-height: 600px;
 }
 
 #project-ca-web {
@@ -355,7 +355,7 @@ nav {
 	font-family: "Roboto Light", sans-serif;
 	color: white;
 	transition: all 0.5s ease 0s;
-	min-height: 450px;
+	min-height: 600px;
 	z-index: 2;
 }
 
@@ -972,10 +972,10 @@ footer ul.social a:focus  {
 	p.hash-tag {
 		font-size: 20px;
 		padding-left: 40px;
+		margin-bottom: 0;
 	}
 
 	#social-nav {
-		padding-top: 20px;
 		width: 320px;
 	}
 
@@ -1122,8 +1122,21 @@ footer ul.social a:focus  {
 		letter-spacing: 0;
 	}
 
+	header {
+		min-height: 550px;
+	}
+
 	nav {
 		width: 240px;
+		min-height: 550px;
+	}
+
+	.project-background {
+		min-height: 550px;
+	}
+
+	.project-container {
+		min-height: 550px;
 	}
 
 	nav.offcanvas {
@@ -1230,6 +1243,7 @@ footer ul.social a:focus  {
 	p.hash-tag {
 		font-size: 16px;
 		padding-left: 25px;
+		margin-bottom: 20px;
 	}
 
 	#social-nav {
