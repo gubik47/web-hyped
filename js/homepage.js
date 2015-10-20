@@ -221,5 +221,10 @@ function closeForm(e, element) {
 			}, 1000);
 		}
 	});
+
+	/* Language select toggle on hover */
+	$(".language-select").hoverIntent(function() {
+		$(".language-select div:last-child").slideToggle();
+	});
 })();
 

@@ -105,6 +105,44 @@ header.in #main-logo-container {
 	height: 25px;
 }
 
+.language-select {
+	position: absolute;
+	z-index: 2;
+	display: inline-block;
+	top: 40px;
+	right: 20px;
+	transition: all 0.5s ease 0s;
+}
+
+.language-select:hover {
+	cursor: pointer;
+}
+
+.language-select a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	outline: none;
+}
+
+.language-select div {
+	width: 45px;
+	height: 28px;
+}
+
+.language-select div:last-child {
+	margin-top: 10px;
+	display: none;
+}
+
+.language-select div.en {
+	background: url(../images/icons/eng_flag.png) no-repeat scroll 0 0;
+}
+
+.language-select div.cz {
+	background: url(../images/icons/cz_flag.png) no-repeat scroll 0 0;
+}
+
 header .what-we-do {
 	position: absolute;
 	z-index: 2;
@@ -120,7 +158,7 @@ header .what-we-do {
 #nav-container {
 	position: absolute;
 	top: 41px;
-	right: 40px;
+	right: 80px;
 	transition: all 0.5s ease 0s;
 	background: url(../images/icons/icon_nav_orange.png) 0 0 no-repeat scroll;
 	background-size: contain;
@@ -951,7 +989,11 @@ footer ul.social a:focus  {
 	}
 
 	header.in #nav-container {
-		right: 360px;
+		right: 450px;
+	}	
+
+	header.in .language-select {
+		right: 375px;
 	}
 
 	header.in #main-logo-container {
@@ -962,8 +1004,17 @@ footer ul.social a:focus  {
 		height: 30px;
 	}
 
+	.language-select {
+		top: 43px;
+		right: 45px;
+	}
+
+	.language-select div {
+		height: 30px;
+	}
+
 	#nav-container {
-		right: 30px;
+		right: 120px;
 		top: 28px;
 		width: 100px;
 		font-size: 40px;
