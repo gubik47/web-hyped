@@ -15,32 +15,33 @@
 
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
-<body class="about-us">
+<body class="about-us cs">
 	<div id="about-us-wrapper">
 		<div id="about-us" class="site-cover">
-			<h1>We love</h1>
-			<p>beautiful things, that's a fact. What's a beauty? You know when you see it... We bring that feeling into everything we do so you and your customers can fall in love as well. We deliver complete solutions in branding / webdesign / merchandising and marketing, with love.</p>
+			<h1>Máme rádi</h1>
+			<p>krásné věci, to je prostě fakt. Co je krása? To poznáte, až ji uvidíte&hellip; Všechny naše projekty se snažíme dělat tak, aby jste se do nich vy i vaši zákazníci zamilovali. Přinášíme kompletní řešení v brandingu / webdesignu / merchandisingu a marketigu, a to samozřejmě s láskou.</p>
 			<div class="circle-container">
 				<div class="circle"></div>
 				<div class="circle"></div>
 				<div class="circle"></div>
 			</div>
-			<h1>We do</h1>
+			<h1>Děláme</h1>
 			<ul>
 				<li>Design</li>
 				<li>Branding</li>
-				<li>Merchandising</li>
-				<li>Campaingn</li>
+				<li><a href="merch">Merchandising</a></li>
+				<li>Kampaň</li>
 				<li>WEB / UI / UX</li>
+				<li>E-shop</li>
 			</ul>
-			<h1>Clients</h1>
+			<h1>Klienti</h1>
 			<div class="clients-container">
 				<div class="row">
 					<div class="col-md-4">
 						<img class="left client-logo" src="../images/lewron_logo_small.png">
 					</div>
 					<div class="col-md-4">
-						<img class="right client-logo" id="farna-logo" src="../images/farna_logo_small.png">
+						<img class="client-logo" id="farna-logo" src="../images/farna_logo_small.png">
 					</div>
 					<div class="col-md-4">
 						<img class="right client-logo" id="andel-logo" src="../images/andel_logo_small.png">
@@ -48,10 +49,10 @@
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<img class="right client-logo" src="../images/bontonland_logo_small.png">
+						<img class="left client-logo" src="../images/bontonland_logo_small.png">
 					</div>
 					<div class="col-md-4">
-						<img class="right client-logo" id="suitart-logo" src="../images/suitart_logo_small.png">
+						<img class="client-logo" id="suitart-logo" src="../images/suitart_logo_small.png">
 					</div>					
 				</div>
 			</div>
@@ -61,35 +62,35 @@
 		<div class="qoute-border-container"></div>
 		<section>
 			<section id="contact-form-container">
-				<div>
-					<h2>Do not hesitate to</h2>
-					<h2>ask us&hellip;anything!</h2>
-					<form id="contact-form">
-						<select name="service" id="jquery-select" class="form-control">
-							<option id="option-placeholder" disabled selected>Choose a service</option>
-							<option value="Design">Design</option>
-							<option value="Branding">Branding</option>
-							<option value="Merchandising">Merchandising</option>
-							<option value="Campaign">Campaign</option>
-							<option value="WEB / UI / UX">WEB / UI / UX</option>
-							<option value="Case study">Case study</option>
-							<option value="E-shop">E-shop</option>
-	        				<option value="Anything">Anything</option>
-						</select>
-						<div class="validation-wrapper">
-							<input name="full-name" class="form-control" type="text" placeholder="name">
-							<span class="name validation">please introduce yourself</span>
-							<span class="required">(required)</span>
-						</div>
-						<div class="validation-wrapper">
-							<input name="email" class="form-control"type="text" placeholder="email">
-							<span class="email validation">please tell us/correct your email</span>
-							<span class="required">(required)</span>
-						</div>
-						<textarea name="info" class="form-control" placeholder="Tell us a bit more about your project."></textarea>
-						<input type="submit" value="send">
-					</form>
-				</div>
+					<div>
+						<h2>Neváhejte se nás</h2>
+						<h2>zeptat na&hellip;cokoliv!</h2>
+						<form id="contact-form">
+							<select name="service" id="jquery-select" class="form-control">
+								<option id="option-placeholder" disabled selected>Vyberte službu</option>
+								<option value="Design">Design</option>
+								<option value="Branding">Branding</option>
+								<option value="Merchandising">Merchandising</option>
+								<option value="Campaign">Campaign</option>
+								<option value="WEB / UI / UX">WEB / UI / UX</option>
+								<option value="Case study">Case study</option>
+								<option value="E-shop">E-shop</option>
+                				<option value="Anything">Cokoliv</option>
+							</select>
+							<div class="validation-wrapper">
+								<input name="full-name" class="form-control" type="text" placeholder="vaše jméno">
+								<span class="name validation">prosím představte se</span>
+								<span class="required">(povinné)</span>
+							</div>
+							<div class="validation-wrapper">
+								<input name="email" class="form-control"type="text" placeholder="váš email">
+								<span class="email validation">prosím zadejte/opravte váš email</span>
+								<span class="required">(povinné)</span>
+							</div>
+							<textarea name="info" class="form-control" placeholder="Povězte nám víc o svém projektu."></textarea>
+							<input type="submit" value="Odeslat">
+						</form>
+					</div>
 			</section>
 			<section id="form-submit-success">
 				<div>

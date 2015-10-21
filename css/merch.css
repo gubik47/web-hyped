@@ -19,7 +19,7 @@ body {
 }
 
 #page-container.merch {
-	font-family: "proxima_novalight", Helvetica, Arial, sans-serif;
+	font-family: "Roboto Light", Helvetica, Arial, sans-serif;
 	position: relative;
 	z-index: 1;
 }
@@ -155,7 +155,7 @@ section p {
 
 .we-offer .wrapper {
 	padding: 20px;
-	height: 440px;
+	height: 450px;
 }
 
 .we-offer a {
@@ -287,7 +287,7 @@ section p {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	max-width: 120px;
+	max-width: 150px;
 }
 
 .product ul:after {
@@ -313,7 +313,7 @@ section p {
 
 .product-contact {
 	background-color: #EEE;
-	height: 110px;
+	height: 106px;
 	padding: 0;
 }
 
@@ -617,7 +617,7 @@ footer {
 
 	.product .product-info {
 		display: inline-block;
-		max-width: 460px;
+		width: 460px;
 	}
 
 	.realization img {

@@ -9,16 +9,30 @@ function toggleNav() {
 /* Displays text popup after form submission */
 function displayMessage(type) {
 	$("#contact-form-container").toggle();
-	if (type == "s") {
-		$("#form-submit-success div h2:first-child").text("High five, you've made it.");
-		$("#form-submit-success div h2:last-child").text("First step towards success.");
-		$("#form-submit-success a.return").text("View portfolio");
-		$("#form-submit-success a.return").addClass("success");
+	if ($("body").hasClass("cs")) {
+		if (type == "s") {
+			$("#form-submit-success div h2:first-child").text("High five, zvládli jste to.");
+			$("#form-submit-success div h2:last-child").text("První krok k úspěchu.");
+			$("#form-submit-success a.return").text("Zobrazit portfolio");
+			$("#form-submit-success a.return").addClass("success");
+		} else {
+			$("#form-submit-success div h2:first-child").text("Oops, něco se pokazilo.");
+			$("#form-submit-success div h2:last-child").text("Zkuste to znovu později...");
+			$("#form-submit-success a.return").text("Zpět");
+			$("#form-submit-success a.return").removeClass("success");
+		}
 	} else {
-		$("#form-submit-success div h2:first-child").text("Oops, something went wrong.");
-		$("#form-submit-success div h2:last-child").text("Please try again later...");
-		$("#form-submit-success a.return").text("Go back");
-		$("#form-submit-success a.return").removeClass("success");
+		if (type == "s") {
+			$("#form-submit-success div h2:first-child").text("High five, you've made it.");
+			$("#form-submit-success div h2:last-child").text("First step towards success.");
+			$("#form-submit-success a.return").text("View portfolio");
+			$("#form-submit-success a.return").addClass("success");
+		} else {
+			$("#form-submit-success div h2:first-child").text("Oops, something went wrong.");
+			$("#form-submit-success div h2:last-child").text("Please try again later...");
+			$("#form-submit-success a.return").text("Go back");
+			$("#form-submit-success a.return").removeClass("success");
+		}
 	}
 	$("#form-submit-success").toggle();
 }

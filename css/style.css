@@ -280,6 +280,10 @@ ul.project-focus li.true:before {
 	font-family: "Roboto Light", sans-serif;
 }
 
+body.cs .button-project-view {
+	letter-spacing: 3px;
+}
+
 .button-project-view:visited {
 	color: #F69670;
 }
@@ -687,7 +691,7 @@ textarea:-ms-input-placeholder {
 #form-submit-success a.return,
 #form-submit-success a.return:visited,
 #form-submit-success a.return:focus {
-	width: 150px;
+	width: 200px;
 	margin: 55px auto 0;
 	color: #444;
 	display: inline-block;
@@ -775,8 +779,8 @@ textarea:-ms-input-placeholder {
 
 #footer-info-container td {
 	border: 2px solid #FFF;
-	width: 100px;
-	height: 100px;
+	width: 90px;
+	height: 90px;
 	text-align: center;
 }
 
@@ -1336,6 +1340,11 @@ footer ul.social a:focus  {
 
 #about-us #suitart-logo {
 	width: 50%;
+}
+
+#about-us ul a:hover,
+#about-us ul a:focus {
+	color: #F39773;
 }
 
 #about-us ul {

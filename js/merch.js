@@ -43,17 +43,32 @@ function setUpColourBoxes() {
 /* Displays text popup after form submission */
 function displayMessage(type) {
 	$("#contact-form-container").toggle();
-	if (type == "s") {
-		$("#form-submit-success div h2:first-child").text("High five, you've made it.");
-		$("#form-submit-success div h2:last-child").text("First step towards success.");
-		$("#form-submit-success a.return").text("View portfolio");
-		$("#form-submit-success a.return").addClass("success");
+	if ($("body").hasClass("cs")) {
+		if (type == "s") {
+			$("#form-submit-success div h2:first-child").text("High five, zvládli jste to.");
+			$("#form-submit-success div h2:last-child").text("První krok k úspěchu.");
+			$("#form-submit-success a.return").text("Zobrazit portfolio");
+			$("#form-submit-success a.return").addClass("success");
+		} else {
+			$("#form-submit-success div h2:first-child").text("Oops, něco se pokazilo.");
+			$("#form-submit-success div h2:last-child").text("Zkuste to znovu později...");
+			$("#form-submit-success a.return").text("Zpět");
+			$("#form-submit-success a.return").removeClass("success");
+		}
 	} else {
-		$("#form-submit-success div h2:first-child").text("Oops, something went wrong.");
-		$("#form-submit-success div h2:last-child").text("Please try again later...");
-		$("#form-submit-success a.return").text("Go back");
-		$("#form-submit-success a.return").removeClass("success");
+		if (type == "s") {
+			$("#form-submit-success div h2:first-child").text("High five, you've made it.");
+			$("#form-submit-success div h2:last-child").text("First step towards success.");
+			$("#form-submit-success a.return").text("View portfolio");
+			$("#form-submit-success a.return").addClass("success");
+		} else {
+			$("#form-submit-success div h2:first-child").text("Oops, something went wrong.");
+			$("#form-submit-success div h2:last-child").text("Please try again later...");
+			$("#form-submit-success a.return").text("Go back");
+			$("#form-submit-success a.return").removeClass("success");
+		}
 	}
+
 	$("#form-submit-success").toggle();
 }
 
@@ -112,9 +127,9 @@ function closePopup() {
 function updateFilter() {
 	$(".filter li.cat").removeClass("active");
 
-	var active = $(this).html();
+	var active = $(this).data("cat");
 	$(".filter li.cat").each(function() {
-		if ($(this).html() === active) {
+		if ($(this).data("cat") === active) {
 			$(this).addClass("active");
 		}
 	});
@@ -124,7 +139,7 @@ function updateFilter() {
 
 /* Filters products based on selected category */
 function filterProducts() {
-	var category = $(".filter .active").html().toLowerCase();
+	var category = $(".filter .active").data("cat").toLowerCase();
 	if (category == "all") {
 		$(".products img").fadeIn();
 	} else {
@@ -165,6 +180,31 @@ function openProductPopup(productId) {
 		}
 	}
 }
+
+/* Displays specific slide when clicked on slide counter */
+/*function displaySlide(id, counter) {
+	$(".slide.active").animate({
+        left: "100%"
+    }, 500, function() {
+    	$(this).removeClass("active");
+        $(this).css("left", "-100%");
+
+        var nextSlide = $(this).siblings(id);
+        nextSlide.css("left", "-100%");
+        nextSlide.animate({
+        	left: "0"
+        }, function() {
+        	nextSlide.css("left", 0);
+        })
+        nextSlide.addClass("active");
+
+        var active = $(".slide-counter li.active");
+		active.removeClass("active");
+		counter.addClass("active");
+
+        $(nextSlide).prependTo("#slides-container");
+    });
+}*/
 
 /* Displays next slide in We offer section */
 function prevSlide() {
@@ -283,7 +323,7 @@ function decCounter() {
 
 		hideValidation();
 		// AJAX form submission
-		$.post("./scripts/contact_form_submit.php", form.serialize(), function(data) {
+		$.post("../scripts/contact_form_submit.php", form.serialize(), function(data) {
 			var data = JSON.parse(data);
 			if (data.res == "s") {
 				// success
@@ -322,4 +362,8 @@ function decCounter() {
 			$(".arrow-right").click();
 		}
 	});
+
+	/*$(".slide-counter li").click(function() {
+		displaySlide($(this).data("slide"), $(this));
+	});*/
 })();
