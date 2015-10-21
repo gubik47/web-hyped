@@ -393,6 +393,10 @@ section p {
 	margin: 15px auto;
 }
 
+.proj-gallery div.cover {
+	display: inline-block;
+}
+
 .realization a {
 	outline: none;
 }
@@ -407,6 +411,18 @@ section p {
 
 .realization .proj-gallery a:last-child img {
 	margin-top: 30px;
+}
+
+.proj-gallery a img.cover {
+	display: none;
+}
+
+.proj-gallery a:not(.new):hover img {
+	display: none;
+}
+
+.proj-gallery a:not(.new):hover img.cover {
+	display: inline;
 }
 
 footer {
