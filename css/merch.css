@@ -47,11 +47,17 @@ body {
 }
 
 header {
-	background: #b0ded3 url(../images/merch/hyped_merch_header.png) no-repeat scroll 0 0;
+	background: #b0ded3 url(../images/merch/hyped_merch_header_en.png) no-repeat scroll 0 0;
 	background-size: 260px auto;
 	background-position: center;
 	height: 400px;
 	position: relative;
+}
+
+body.cs header {
+	background: #b0ded3 url(../images/merch/hyped_merch_header_cs.png) no-repeat scroll 0 0;
+	background-size: 260px auto;
+	background-position: center;
 }
 
 header .scroll-arrow {
@@ -422,6 +428,10 @@ footer {
 		background-size: 460px auto;
 	}
 
+	body.cs header {
+		background-size: 460px auto;
+	}
+
 	.we-offer .wrapper {
 		height: 300px;
 	}
@@ -573,6 +583,10 @@ footer {
 
 @media only screen and (min-width: 1024px) {
 	header {
+		background-size: 660px auto;
+	}
+
+	body.cs header {
 		background-size: 660px auto;
 	}
 
