@@ -182,31 +182,35 @@ function openProductPopup(productId) {
 }
 
 /* Displays specific slide when clicked on slide counter */
-/*function displaySlide(id, counter) {
-	$(".slide.active").animate({
+function displaySlide(id, counter) {
+	var activeSlide = $(".slide.active");
+	var targetSlide = $(".slide.active").siblings(id);
+
+	if (targetSlide.length === 0) {
+		return;
+	}
+
+	activeSlide.animate({
         left: "100%"
     }, 500, function() {
     	$(this).removeClass("active");
         $(this).css("left", "-100%");
 
-        var nextSlide = $(this).siblings(id);
-        nextSlide.css("left", "-100%");
-        nextSlide.animate({
+        targetSlide.css("left", "-100%");
+        targetSlide.animate({
         	left: "0"
         }, function() {
-        	nextSlide.css("left", 0);
+        	targetSlide.css("left", 0);
         })
-        nextSlide.addClass("active");
+        targetSlide.addClass("active");
 
         var active = $(".slide-counter li.active");
 		active.removeClass("active");
 		counter.addClass("active");
-
-        $(nextSlide).prependTo("#slides-container");
     });
-}*/
+}
 
-/* Displays next slide in We offer section */
+/* Displays previous slide in We offer section */
 function prevSlide() {
 	$(".slide.active").animate({
         left: "100%"
@@ -214,22 +218,23 @@ function prevSlide() {
     	$(this).removeClass("active");
         $(this).css("left", "-100%");
 
-        var nextSlide = $(this).siblings(":last");
-        nextSlide.css("left", "-100%");
-        nextSlide.animate({
+        var prevSlide = $(this).prev();
+        if (prevSlide.length === 0) {
+        	prevSlide = $(this).siblings(":last");
+        }
+        prevSlide.css("left", "-100%");
+        prevSlide.animate({
         	left: "0"
         }, function() {
-        	nextSlide.css("left", 0);
+        	prevSlide.css("left", 0);
         })
-        nextSlide.addClass("active");
+        prevSlide.addClass("active");
 
         decCounter();
-
-        $(nextSlide).prependTo("#slides-container");
     });
 }
 
-/* Displays previous slide in We offer section */
+/* Displays next slide in We offer section */
 function nextSlide() {
 	$(".slide.active").animate({
         left: "-100%"
@@ -237,18 +242,19 @@ function nextSlide() {
     	$(this).removeClass("active");
         $(this).css("left", "100%");
 
-       	var prevSlide = $(this).next();
-       	prevSlide.css("left", "100%");
-	    prevSlide.animate({
+       	var nextSlide = $(this).next();
+       	if (nextSlide.length === 0) {
+       		nextSlide = $(this).siblings(":first");
+       	}
+       	nextSlide.css("left", "100%");
+	    nextSlide.animate({
 	    	left: "0"
 	    }, function() {
-	    	prevSlide.css("left", "0");
+	    	nextSlide.css("left", "0");
 	    });
-	    prevSlide.addClass("active");
+	    nextSlide.addClass("active");
 
 	    incCounter();
-
-        $(this).appendTo("#slides-container");
     });
 }
 
@@ -341,7 +347,7 @@ function decCounter() {
 	/* Handler for selecting new category in product filter */
 	$(".filter li.cat").click(updateFilter);
 
-	/* We offer slides functionality */
+	/* Slides functionality */
 	$(".arrow-left").click(function(event) {
 		event.preventDefault();
 		nextSlide();
@@ -350,6 +356,10 @@ function decCounter() {
 	$(".arrow-right").click(function(event) {
 		event.preventDefault();
 		prevSlide();
+	});
+
+	$(".slide-counter li").click(function() {
+		displaySlide($(this).data("slide"), $(this));
 	});
 
 	/* swipe support for touch devices */
@@ -362,8 +372,4 @@ function decCounter() {
 			$(".arrow-right").click();
 		}
 	});
-
-	/*$(".slide-counter li").click(function() {
-		displaySlide($(this).data("slide"), $(this));
-	});*/
 })();
