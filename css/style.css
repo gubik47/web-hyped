@@ -1328,6 +1328,21 @@ footer ul.social a:focus  {
 	display: inline-block;
 }
 
+#daniel {
+	background: url(../images/daniel_200x200.jpg) no-repeat scroll 0 0;
+	background-size: contain;
+}
+
+#pavel {
+	background: url(../images/pavel_200x200.jpg) no-repeat scroll 0 0;
+	background-size: contain;
+}
+
+#krystof {
+	background: url(../images/krystof_200x200.jpg) no-repeat scroll 0 0;
+	background-size: contain;
+}
+
 #about-us .clients-container {
 	max-width: 1000px;
 	display: inline-block;
