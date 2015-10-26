@@ -751,6 +751,10 @@ textarea:-ms-input-placeholder {
 	letter-spacing: 8px;
 }
 
+body.cs #footer-info-container h2 span {
+	letter-spacing: 14px;
+}
+
 #footer-info-container p {
 	font-family: "Roboto Medium", sans-serif;
 	text-align: center;
@@ -1187,6 +1191,10 @@ footer ul.social a:focus  {
 
 	#footer-info-container h2 span {
 		letter-spacing: 6px;
+	}
+
+	body.cs #footer-info-container h2 span {
+		letter-spacing: 10px;
 	}
 
 	#footer-info-container div:first-child {
