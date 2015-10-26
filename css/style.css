@@ -1309,6 +1309,15 @@ footer ul.social a:focus  {
 	margin-top: 50px;
 }
 
+#about-us h1.we-do {
+	margin-top: 10px;
+}
+
+#about-us h1.clients {
+	margin-bottom: 0;
+	padding-bottom: 5px;
+}
+
 #about-us h1:first-child {
 	margin-top: 100px;
 }
@@ -1406,7 +1415,13 @@ footer ul.social a:focus  {
 	}
 
 	#about-us .circle-container {
-		width: 300px;
+		width: 460px;
+	}
+
+	#about-us .circle {
+		width: 120px;
+		height: 120px;
+		border-radius: 60px;
 	}
 }
 
