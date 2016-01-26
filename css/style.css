@@ -1330,19 +1330,20 @@ footer ul.social a:focus  {
 
 #about-us .circle-container {
 	display: flex;
-	flex-direction: row ltr;
+	flex-direction: row wrap;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	width: 280px;
+	width: 260px;
 	margin: 30px auto 0 auto;
 }
 
 #about-us .circle {
-	width: 80px;
-	height: 80px;
-	border-radius: 50px;
+	width: 120px;
+    height: 120px;
+    border-radius: 60px;
 	background-color: #FFF;
 	display: inline-block;
+    margin-bottom: 20px;
 }
 
 #daniel {
@@ -1357,6 +1358,11 @@ footer ul.social a:focus  {
 
 #krystof {
 	background: url(../images/krystof_200x200.jpg) no-repeat scroll 0 0;
+	background-size: contain;
+}
+
+#michal {
+    background: url(../images/michal_200x200.jpg) no-repeat scroll 0 0;
 	background-size: contain;
 }
 
@@ -1413,16 +1419,6 @@ footer ul.social a:focus  {
 	#about-us img {
 		width: 100%;
 	}
-
-	#about-us .circle-container {
-		width: 460px;
-	}
-
-	#about-us .circle {
-		width: 120px;
-		height: 120px;
-		border-radius: 60px;
-	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -1445,6 +1441,10 @@ footer ul.social a:focus  {
 
 	#about-us img.right {
 		padding-left: 30px;
+	}
+    
+    #about-us .circle-container {
+		width: 570px;
 	}
 }
 
